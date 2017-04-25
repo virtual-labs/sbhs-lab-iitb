@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Disturbance Rejection</TITLE>
+<META NAME="description" CONTENT="Disturbance Rejection">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node106.html">
+<LINK REL="previous" HREF="node96.html">
+<LINK REL="up" HREF="node77.html">
+<LINK REL="next" HREF="node102.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1400"
+  HREF="node102.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1398"
+  HREF="node77.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1392"
+  HREF="node100.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1401"
+  HREF="node102.html">PI Controller Designed by</A>
+<B> Up:</B> <A NAME="tex2html1399"
+  HREF="node77.html">Design and Implementation of</A>
+<B> Previous:</B> <A NAME="tex2html1393"
+  HREF="node100.html">Conclusion</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00970000000000000000">
+Disturbance Rejection</A>
+</H1>
+
+<P>
+Apart from tracking the set point, the system should also be able to reject disturbances. There may be several factors 
+influencing the controlled variable and not all of them can be manipulated. Therefore, it becomes necessary for the 
+controller to not let the changes in the non-manipulated variables to affect the controlled variable. This is called 
+Disturbance Rejection.
+<BR>
+In this system, the disturbance variable is the fan input. Therefore, the controller has to work in 
+such a way that changes in the fan input does not affect the temperature in the SBHS.
+<BR>
+In this project, several experiments 
+were conducted with the self tuning and conventional PI/PID Controllers. Table <A HREF="#dist">9.4</A> shows the fan input changes given 
+during the various experiments that were conducted with conventional and self tuning controllers designed using several 
+methods.
+<BR>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="3961"></A>
+<TABLE>
+<CAPTION><STRONG>Table 9.4:</STRONG>
+Fan input changes in experiments conducted for Disturbance Rejection</CAPTION>
+<TR><TD>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+		<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">Conventional Controller</TD>
+<TD ALIGN="CENTER">Self Tuning Controller</TD>
+</TR>
+<TR><TD ALIGN="CENTER">Direct Synthesis PI</TD>
+<TD ALIGN="CENTER">50 to 100</TD>
+<TD ALIGN="CENTER">50 to 100</TD>
+</TR>
+<TR><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">100 to 50</TD>
+<TD ALIGN="CENTER">100 to 50</TD>
+</TR>
+<TR><TD ALIGN="CENTER">Ziegler Nichols PI</TD>
+<TD ALIGN="CENTER">50 to 100</TD>
+<TD ALIGN="CENTER">50 to 100</TD>
+</TR>
+<TR><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">100 to 50</TD>
+<TD ALIGN="CENTER">100 to 50</TD>
+</TR>
+<TR><TD ALIGN="CENTER">Ziegler Nichols PID</TD>
+<TD ALIGN="CENTER">50 to 100</TD>
+<TD ALIGN="CENTER">50 to 100</TD>
+</TR>
+<TR><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">100 to 50</TD>
+<TD ALIGN="CENTER">100 to 50</TD>
+</TR>
+</TABLE>
+	
+	<A NAME="dist"></A>
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html1402"
+  HREF="node102.html">PI Controller Designed by Direct Synthesis</A>
+<LI><A NAME="tex2html1403"
+  HREF="node103.html">PI Controller using Ziegler Nichols Tuning</A>
+<LI><A NAME="tex2html1404"
+  HREF="node104.html">PID Controller using Ziegler Nichols Tuning</A>
+<LI><A NAME="tex2html1405"
+  HREF="node105.html">Conclusion</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1400"
+  HREF="node102.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1398"
+  HREF="node77.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1392"
+  HREF="node100.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1401"
+  HREF="node102.html">PI Controller Designed by</A>
+<B> Up:</B> <A NAME="tex2html1399"
+  HREF="node77.html">Design and Implementation of</A>
+<B> Previous:</B> <A NAME="tex2html1393"
+  HREF="node100.html">Conclusion</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

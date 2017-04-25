@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Procedure to calculate 2DOF parameters using scilab </TITLE>
+<META NAME="description" CONTENT="Procedure to calculate 2DOF parameters using scilab ">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="previous" HREF="node57.html">
+<LINK REL="up" HREF="node57.html">
+<LINK REL="next" HREF="node59.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html923"
+  HREF="node59.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html921"
+  HREF="node57.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html917"
+  HREF="node57.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html924"
+  HREF="node59.html">Implementing 2DOF controller locally</A>
+<B> Up:</B> <A NAME="tex2html922"
+  HREF="node57.html">2-DOF Pole Placement Controller</A>
+<B> Previous:</B> <A NAME="tex2html918"
+  HREF="node57.html">2-DOF Pole Placement Controller</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00612100000000000000"></A><A NAME="sec-steps"></A>
+<BR>
+Procedure to calculate 2DOF parameters using scilab 
+</H3>
+The procedure explained here is applicable to both virtual as well as local experiments. The following steps must be executed properly to calculate the controller parameters.
+
+<OL>
+<LI>Change the directory to <TT>2dof_controller</TT>. 
+</LI>
+<LI>Execute the command <TT>getd dc/scilab</TT> in the scilab console.
+</LI>
+<LI>Open the Scilab code <TT>twodof_para.sce</TT>. Define the variable <TT>TFcont</TT> with first order transfer function (or second order transfer function) of your SBHS. Execute the Scilab code. With this, the 2-DOF controller parameters have been calculated. Figure <A HREF="node61.html#2dof-para-out">6.6</A> shows the calculated 2-DOF controller parameters on the Scilab console.
+</LI>
+<LI>Open the Scilab code <TT>twodof.sci</TT>. Make sure that the first order control law (or second order control law in case of second order plant transfer function) is uncommented and the second order control law (or first order control law in case of second order transfer function) is commented.
+</LI>
+</OL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

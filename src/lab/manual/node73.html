@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>IMC Design for Single Board Heater System</TITLE>
+<META NAME="description" CONTENT="IMC Design for Single Board Heater System">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node74.html">
+<LINK REL="previous" HREF="node72.html">
+<LINK REL="up" HREF="node72.html">
+<LINK REL="next" HREF="node74.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1081"
+  HREF="node74.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1079"
+  HREF="node72.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1073"
+  HREF="node72.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1082"
+  HREF="node74.html">Steps for Designing IMC</A>
+<B> Up:</B> <A NAME="tex2html1080"
+  HREF="node72.html">Implementing Internal Model Controller</A>
+<B> Previous:</B> <A NAME="tex2html1074"
+  HREF="node72.html">Implementing Internal Model Controller</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00810000000000000000">
+IMC Design for Single Board Heater System</A>
+</H1>
+Internal Model Controller contains explicit model of plant [<A
+ HREF="node137.html#kmmdc09">1</A>]. 
+The closed loop system can be stabilized with the use of a stable open loop transfer function and a stable controller. 
+The IMC is mainly used for stable plants.
+<BR>
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="imcfeedback"></A><A NAME="3450"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.2:</STRONG>
+IMC feedback configuration</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="984" HEIGHT="449" ALIGN="BOTTOM" BORDER="0"
+ SRC="./imcfb.png"
+ ALT="Image imcfb"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Let the transfer function of the stable plant be denoted by <SPAN CLASS="MATH"><IMG
+ WIDTH="47" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img367.png"
+ ALT="$ G_p (z)$"></SPAN> and its model is denoted by <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img231.png"
+ ALT="$ G(z)$"></SPAN>. Hence
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="176" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img368.png"
+ ALT="$\displaystyle y(n) = G(z)u(n)+\xi(n)$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">8</SPAN>.<SPAN CLASS="arabic">1</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where: 
+<BR>
+y(n) = plant output
+<BR>
+u(n) = plant input
+<BR>      <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img369.png"
+ ALT="$ \xi$"></SPAN>(n) = noise
+
+<P>
+For noise rejection with y=0, we require <!-- MATH
+ $G_Q=G_p^{-1}$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="81" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img370.png"
+ ALT="$ G_Q=G_p^{-1}$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="63" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img371.png"
+ ALT="$ G=G_p$"></SPAN>, i.e., for stable <SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img372.png"
+ ALT="$ G_Q$"></SPAN> we require 
+an approximate inverse of G. Also, for internal stability, transfer function between any two points 
+in the feedback loop must be stable [<A
+ HREF="node137.html#kmmdc09">1</A>].
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="feedback"></A><A NAME="3459"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8.3:</STRONG>
+Feedback configuration</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="1070" HEIGHT="433" ALIGN="BOTTOM" BORDER="0"
+ SRC="./equistdimc.png"
+ ALT="Image equistdimc"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<BR><HR>
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Executing scilab code</TITLE>
+<META NAME="description" CONTENT="Executing scilab code">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html355"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html353"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html347"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html356"
+  HREF="node6.html">Conducting experiments over virtual</A>
+<B> Up:</B> <A NAME="tex2html354"
+  HREF="node2.html">Conducting experiments using the</A>
+<B> Previous:</B> <A NAME="tex2html348"
+  HREF="node4.html">Configuring proxy settings and</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00113000000000000000">
+Executing scilab code</A>
+</H2>
+Inside the <TT>StepTest</TT> folder, if on a windows system, double click on the  file <TT>stepc.sce</TT>. This should automatically launch scilab and also open the <TT>stepc.sce</TT> in the scilab editor. It will also automatically change the scilabs working directory. On a linux system, launch scilab manually. Then change the scilab working directory to the folder <TT>StepTest</TT>. This can be done by clicking on <TT>File</TT> menu and then selecting <TT>change current directory</TT>. Next, execute the command <TT>getd ..common_files</TT>. Scilab command <TT>getd</TT> is used to load all functions defined in all .sci files inside a specified folder. Here we have some important function files inside the <TT>..common_files</TT> directory. Executing this command will load all of the functions that the experiment needs. Open the file <TT>stepc.sce</TT> using the <TT>Open</TT> option inside <TT>File</TT> menu. The file is shown in Fig. <A HREF="#stepc">1.4</A>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="stepc"></A><A NAME="92"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1.4:</STRONG>
+stepc.sce file</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="617" HEIGHT="488" ALIGN="BOTTOM" BORDER="0"
+ SRC="./stepc.png"
+ ALT="Image stepc"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The experiment sampling time can be set inside the  <TT>stepc.sce</TT> file. You may want to change it to a higher value if your network is slow. The default value of 1 second works fine in most cases. On the menu bar, click on <TT>Execute</TT> option and choose option <TT>file with echo</TT>. This will execute  the scilab code. If the network is working fine, an xcos diagram will open automatically. If it doesnt open then see the scilab console for error messages. If you get a <TT>No network connection</TT> error message then try executing the scilab code again. The xcos diagram is for the step test experiment as shown in Fig. <A HREF="#step-xcos">1.5</A>. You can set the value of the heat and fan. Keep the default values. On the menu bar of the xcos window, click on <TT>start</TT> button. This will execute the xcos diagram. If there is no error, you will get a graphic window with three plots. It will show the value of Heat in % Fan in % and ..temperature in degree celcius as shown in Fig. <A HREF="#step-plot">1.6</A>. After sufficient time of experimentation click on the stop button to stop the experiment. Go to the <TT>StepTest</TT> folder. Here you will find a <TT>logs</TT> folder. This folder will have another folder named after your username. It will have the log file for your experiment. Read the log file name as
+<BR>
+YearMonthDate_hours_minutes_seconds.txt. This log file contains all the values of heat fan and temperature. It can be used for further analysis.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="step-xcos"></A><A NAME="106"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1.5:</STRONG>
+Xcos for step test</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="669" HEIGHT="533" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step-xcos.png"
+ ALT="Image step-xcos"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="step-plot"></A><A NAME="111"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1.6:</STRONG>
+Output of Step Test</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="1307" HEIGHT="637" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step-test-output.png"
+ ALT="Image step-test-output"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html355"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html353"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html347"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html356"
+  HREF="node6.html">Conducting experiments over virtual</A>
+<B> Up:</B> <A NAME="tex2html354"
+  HREF="node2.html">Conducting experiments using the</A>
+<B> Previous:</B> <A NAME="tex2html348"
+  HREF="node4.html">Configuring proxy settings and</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

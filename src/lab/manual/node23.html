@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Frequency Response Analysis of a Single Board Heater System by the Application of Sine Wave</TITLE>
+<META NAME="description" CONTENT="Frequency Response Analysis of a Single Board Heater System by the Application of Sine Wave">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node28.html">
+<LINK REL="previous" HREF="node17.html">
+<LINK REL="up" HREF="sbhs-new-manual.html">
+<LINK REL="next" HREF="node24.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html538"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html536"
+  HREF="sbhs-new-manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html530"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html539"
+  HREF="node24.html">Conducting Sine Test on</A>
+<B> Up:</B> <A NAME="tex2html537"
+  HREF="sbhs-new-manual.html">sbhs-new-manual</A>
+<B> Previous:</B> <A NAME="tex2html531"
+  HREF="node22.html">Discussion</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00400000000000000000">
+Frequency Response Analysis of a Single Board Heater System by the Application of Sine Wave</A>
+</H1>
+The aim of this experiment is to do a frequency response analysis of a Single Board Heater System by the 
+application of sine wave. The target group is anyone who has basic knowledge of control engineering.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="xcos_sine"></A><A NAME="1044"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.1:</STRONG>
+Xcos for local Sine Test</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="555" HEIGHT="344" ALIGN="BOTTOM" BORDER="0"
+ SRC="./sine_test.jpg"
+ ALT="Image sine_test"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:scope"></A><A NAME="1049"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.2:</STRONG>
+Plot for sine input 0.007Hz</CAPTION>
+<TR><TD><IMG
+  WIDTH="610" HEIGHT="460" ALIGN="BOTTOM" BORDER="0"
+ SRC="./sine-007-plot.png"
+ ALT="Image sine-007-plot"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+We have used Scilab and Xcos as an interface for sending and receiving data. 
+Xcos diagram is shown in figure <A HREF="#xcos_sine">4.1</A>.
+The heater current is varied sinusoidally. They are given in percentage of maximum. These inputs can be varied by setting the properties of the input block's properties in Xcos. A provision is made to set the parameters related to it like frequency, amplitude 
+and offset. The temperature profile thus obtained is the output. In this experiment we are applying a sine change in the heater current by keeping the fan speed constant. After application of sine change, wait for sufficient amount of time to allow the temperature to reach a steady-state. The plots of their amplitude versus number of collected samples are also available on the scope windows. The output temperature profile, as read by the sensor, is also plotted. The data acquired in the process is stored on the local drive and is available to the user for further calculations.
+
+<P>
+In the <TT>sine_test.xcos</TT> file, open the <TT>sinusoid generator</TT> block's parameters to set the value of sine magnitude and frequency. For the experiment results shown, we have chosen Magnitude = <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img72.png"
+ ALT="$ 10$"></SPAN>, Frequency = <!-- MATH
+ $2*3.14*0.007$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="126" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img73.png"
+ ALT="$ 2*3.14*0.007$"></SPAN>. Note that the frequency is to be put in rad/sec. We keep the Phase = <SPAN CLASS="MATH">0</SPAN>. There is also a provision to give the sine input with an offset in amplitude. This can be set using the <TT>Offset</TT> block. We have choosen offset of 20. The time at which the sine input is given after the experiment is started can also be set. This can be done using the <TT>Initial Time</TT> block. Open the <TT>Initial Time</TT> block's parameters. To make the sine input appear after 200 samples of start of the experiment, keep Step time = <SPAN CLASS="MATH"><IMG
+ WIDTH="33" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img74.png"
+ ALT="$ 200$"></SPAN>, Initial Value = <SPAN CLASS="MATH">0</SPAN> and Final Value = <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img75.png"
+ ALT="$ 1$"></SPAN>. The initial value and final value will never change for any other value of step time.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="sinedata"></A><A NAME="1061"></A>
+<TABLE>
+<CAPTION><STRONG>Table 4.1:</STRONG>
+Data obtained after application of sine input of <SPAN CLASS="MATH"><IMG
+ WIDTH="70" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ 0.007Hz$"></SPAN></CAPTION>
+<TR><TD><IMG
+ WIDTH="569" HEIGHT="107" BORDER="0"
+ SRC="img76.png"
+ ALT="\begin{table}
+\begin{verbatim}
+1.0 20.0 50.0 20.0 1416642805261.0
+2.0 20.0 5...
+...6557353.0
+13094.0 28.5 50.0 26.6 1416656558363.0\end{verbatim}
+\end{table}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+The sine test data file will be saved in <TT>Sine_Test</TT> folder. The name of the file will be the date and time at which the experiment was conducted. A sample data file is provided in the same folder. The sample data file is named as <TT>sine-data-local.txt</TT> and <TT>sine-data-virtual.txt</TT>. Refer to the one depending on wheather you are performing a local or a virtual experiment. Referring to the data file thus obtained as shown in table <A HREF="#sinedata">4.1</A>, the first column in this table denotes samples. The second column in this table denotes heater in percentage. It starts at 20 and then varies sinosoidally. The third column denotes the fan in percentage. It has been held constant at 50 percent. The fourth column refers to the value of temperature. The fifth column denotes time stamp. The virtual data file will have four time stamp columns apart from first 3 columns. These four time stamp columns are client departure, server arrival, server departure and client arrival. These can be used for advanced control algorithms. These additional time stamps exist in virtual mode because of the presense of network delay.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html540"
+  HREF="node24.html">Conducting Sine Test on SBHS locally</A>
+<LI><A NAME="tex2html541"
+  HREF="node25.html">Conducting Sine Test on SBHS, virtually</A>
+<LI><A NAME="tex2html542"
+  HREF="node26.html">Frequency Analysis of sine test data</A>
+<UL>
+<LI><A NAME="tex2html543"
+  HREF="node27.html">Procedure</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html538"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html536"
+  HREF="sbhs-new-manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html530"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html539"
+  HREF="node24.html">Conducting Sine Test on</A>
+<B> Up:</B> <A NAME="tex2html537"
+  HREF="sbhs-new-manual.html">sbhs-new-manual</A>
+<B> Previous:</B> <A NAME="tex2html531"
+  HREF="node22.html">Discussion</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

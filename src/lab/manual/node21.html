@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Procedure</TITLE>
+<META NAME="description" CONTENT="Procedure">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="up" HREF="node20.html">
+<LINK REL="next" HREF="node22.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html520"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html518"
+  HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html514"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html521"
+  HREF="node22.html">Discussion</A>
+<B> Up:</B> <A NAME="tex2html519"
+  HREF="node20.html">Identifying First Order Transfer</A>
+<B> Previous:</B> <A NAME="tex2html515"
+  HREF="node20.html">Identifying First Order Transfer</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00331000000000000000">
+Procedure</A>
+</H2>
+
+<OL>
+<LI>Download the Analysis folder from the sbhs website. It will be available under <TT>downloads</TT> section.  Download the file for <TT>SBHS Analysis Code (local &amp; virtual)</TT>. The name of the file is <TT>scilab_codes_analysis</TT>. The download will be in zip format. Extrat the downloaded zip file. You will get a folder <TT>scilab_codes_analysis</TT>. 
+</LI>
+<LI>Open the <TT>scilab_codes_analysis</TT> folder and then locate and open the folder <TT>Ramp_Analysis</TT>.
+</LI>
+<LI>Copy the ramp test data file to this folder.
+</LI>
+<LI>Change the Scilab working directory to  <TT>Ramp_Analysis</TT>
+</LI>
+<LI>Open the file <TT>ramp_virtual.sce</TT> in scilab editor and enter the name of the data file (with extention) in the <TT>filename</TT> field. 
+</LI>
+<LI>Save and run this code and obtain the plot as shown in figure <A HREF="#firstorder_ramp">3.4</A>. 
+</LI>
+</OL>
+This code uses the routines <TT>label.sci</TT> and <TT>costf_1.sci</TT>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="firstorder_ramp"></A><A NAME="868"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.4:</STRONG>
+Output of the Scilab code <TT>ramp_virtual.sce</TT></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="610" HEIGHT="460" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ramp-analysis.png"
+ ALT="Image ramp-analysis"></TD></TR>
+</TABLE>
+</DIV>
+ <A NAME="firstorderplot"></A>
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="firstorder_ramp_console"></A><A NAME="869"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.5:</STRONG>
+Scilab console after executing code<TT>ramp_virtual.sce</TT></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="819" HEIGHT="534" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ramp-console.png"
+ ALT="Image ramp-console"></TD></TR>
+</TABLE>
+</DIV>
+ <A NAME="firstorderplot"></A>
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR>
+<TD COLSPAN=2 ALIGN="LEFT">
+<BR>
+The results presented are obtained for the data file <TT>ramp-data-virtual.txt</TT>. This data file is present under the <TT>Ramp_Test</TT> directory for local experiments. The plot thus obtained is reasonably good. See the Scilab console to get the values of <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$ \tau$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="19" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="$ K$"></SPAN>. It is as shown in figure <A HREF="#firstorder_ramp_console">3.5</A>
+The figure <A HREF="#firstorder_ramp">3.4</A> shows a screen shot of the same. We obtain <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$ \tau$"></SPAN> = 78.92, K = 0.22. The transfer function 
+obtained here is at the operating point of enterValue percentage of heat. If the experiment is repeated at a different operating point, the transfer function obtained will be different. The gain will correspondingly be more at a higher operating point. This means that the plant is faster at higher temperature. Thus the transfer function of the plant varies with the operating 
+point. Let the transfer function we obtain in this experiment be denoted as <SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$ G_s$"></SPAN>. We obtain<P>
+<BR></TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="154" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img71.png"
+ ALT="$\displaystyle G_s(s) = \frac{0.22}{78.92s+1}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+<A NAME="12">(<SPAN CLASS="arabic">3</SPAN>.<SPAN CLASS="arabic">12</SPAN>)</A></TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html520"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html518"
+  HREF="node20.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html514"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html521"
+  HREF="node22.html">Discussion</A>
+<B> Up:</B> <A NAME="tex2html519"
+  HREF="node20.html">Identifying First Order Transfer</A>
+<B> Previous:</B> <A NAME="tex2html515"
+  HREF="node20.html">Identifying First Order Transfer</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

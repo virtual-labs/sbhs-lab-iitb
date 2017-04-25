@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Design and Implementation of Self Tuning PI and PID Controllers on Single Board Heater System</TITLE>
+<META NAME="description" CONTENT="Design and Implementation of Self Tuning PI and PID Controllers on Single Board Heater System">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node108.html">
+<LINK REL="previous" HREF="node72.html">
+<LINK REL="up" HREF="sbhs-new-manual.html">
+<LINK REL="next" HREF="node78.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1119"
+  HREF="node78.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1117"
+  HREF="sbhs-new-manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1111"
+  HREF="node76.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1120"
+  HREF="node78.html">Introduction</A>
+<B> Up:</B> <A NAME="tex2html1118"
+  HREF="sbhs-new-manual.html">sbhs-new-manual</A>
+<B> Previous:</B> <A NAME="tex2html1112"
+  HREF="node76.html">Implementing IMC virtually</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00900000000000000000">
+Design and Implementation of Self Tuning PI and PID Controllers on Single Board Heater System</A>
+</H1>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html1121"
+  HREF="node78.html">Introduction</A>
+<LI><A NAME="tex2html1122"
+  HREF="node79.html">Theory</A>
+<UL>
+<LI><A NAME="tex2html1123"
+  HREF="node80.html">Why a Self Tuning Controller?</A>
+<LI><A NAME="tex2html1124"
+  HREF="node81.html">The Approach Followed</A>
+<LI><A NAME="tex2html1125"
+  HREF="node82.html">Direct synthesis</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1126"
+  HREF="node83.html">Ziegler Nichols Tuning</A>
+<LI><A NAME="tex2html1127"
+  HREF="node84.html">Step Test Experiments and Parmeter Estimation</A>
+<UL>
+<LI><A NAME="tex2html1128"
+  HREF="node85.html">Step Test Experiment</A>
+<UL>
+<LI><A NAME="tex2html1129"
+  HREF="node86.html">Step change in heater reading from 10 to 15</A>
+<LI><A NAME="tex2html1130"
+  HREF="node87.html">Step Change in Heater Reading from 20 to 25</A>
+<LI><A NAME="tex2html1131"
+  HREF="node88.html">Step Change in Heater Reading from 30 to 35</A>
+<LI><A NAME="tex2html1132"
+  HREF="node89.html">The Open Loop Parameters</A>
+</UL>
+<LI><A NAME="tex2html1133"
+  HREF="node90.html">Conventional Controller Design</A>
+<LI><A NAME="tex2html1134"
+  HREF="node91.html">Self Tuning Controller Design</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1135"
+  HREF="node92.html">PID controller theory</A>
+<UL>
+<LI><A NAME="tex2html1136"
+  HREF="node93.html">PI Controller</A>
+<LI><A NAME="tex2html1137"
+  HREF="node94.html">PID Controller</A>
+<LI><A NAME="tex2html1138"
+  HREF="node95.html">Self Tuning Controller</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1139"
+  HREF="node96.html">Set Point Tracking</A>
+<UL>
+<LI><A NAME="tex2html1140"
+  HREF="node97.html">PI Controller Designed by Direct Synthesis</A>
+<LI><A NAME="tex2html1141"
+  HREF="node98.html">PI Controller using Ziegler Nichols Tuning</A>
+<LI><A NAME="tex2html1142"
+  HREF="node99.html">PID Controller using Ziegler Nichols Tuning</A>
+<LI><A NAME="tex2html1143"
+  HREF="node100.html">Conclusion</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1144"
+  HREF="node101.html">Disturbance Rejection</A>
+<UL>
+<LI><A NAME="tex2html1145"
+  HREF="node102.html">PI Controller Designed by Direct Synthesis</A>
+<LI><A NAME="tex2html1146"
+  HREF="node103.html">PI Controller using Ziegler Nichols Tuning</A>
+<LI><A NAME="tex2html1147"
+  HREF="node104.html">PID Controller using Ziegler Nichols Tuning</A>
+<LI><A NAME="tex2html1148"
+  HREF="node105.html">Conclusion</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1149"
+  HREF="node106.html">Conducting experiments locally</A>
+<LI><A NAME="tex2html1150"
+  HREF="node107.html">Conducting experiments virtually</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

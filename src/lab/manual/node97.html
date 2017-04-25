@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>PI Controller Designed by Direct Synthesis</TITLE>
+<META NAME="description" CONTENT="PI Controller Designed by Direct Synthesis">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node98.html">
+<LINK REL="previous" HREF="node96.html">
+<LINK REL="up" HREF="node96.html">
+<LINK REL="next" HREF="node98.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1362"
+  HREF="node98.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1360"
+  HREF="node96.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1354"
+  HREF="node96.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1363"
+  HREF="node98.html">PI Controller using Ziegler</A>
+<B> Up:</B> <A NAME="tex2html1361"
+  HREF="node96.html">Set Point Tracking</A>
+<B> Previous:</B> <A NAME="tex2html1355"
+  HREF="node96.html">Set Point Tracking</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00961000000000000000">
+PI Controller Designed by Direct Synthesis</A>
+</H2>
+The results of the experiments carried out for the self tuning PI controller using direct synthesis method are shown. 
+The upper plot shows the variations of the set point temperature (the black line) and the actual temperature (the green line)
+in the SBHS. The lower plot shows the control effort.
+
+<DIV ALIGN="CENTER"><A NAME="fig:step32to37"></A><A NAME="3892"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.14:</STRONG>
+Result for self tuning controller designed using Direct Synthesis for set point going from 32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 37<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="781" HEIGHT="329" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step32to37.jpg"
+ ALT="Image step32to37"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Although there is a small overshoot, the controller is able to make the actual temperature follow the set point temperature 
+quiet closely. Looking at higher values of set point changes, the result for set point change going from 35<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C 
+is shown.
+
+<DIV ALIGN="CENTER"><A NAME="fig:step35to45"></A><A NAME="3897"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.15:</STRONG>
+Result for self tuning controller designed using Direct Synthesis for set point going from 35<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="781" HEIGHT="329" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step35to45.jpg"
+ ALT="Image step35to45"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+For a higher set point change also, the controller is able to make the temperature follow the set point closely. Notice the abrupt change in the control effort as soon as the step change in the set point is encountered.
+<BR>
+For comparison, results of experiments done with conventional PI controller designed using the Direct Synthesis method are also shown.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="3902"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.16:</STRONG>
+Result for conventional controller designed using Direct Synthesis for set point going from 32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 37<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="781" HEIGHT="329" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step32to37.jpg"
+ ALT="Image step32to37">
+	
+	</TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="3906"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.17:</STRONG>
+Result for conventional controller designed using Direct Synthesis for Set Point going from 35<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="781" HEIGHT="333" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step35to45.jpg"
+ ALT="Image step35to45"></TD></TR>
+</TABLE>
+</DIV>
+As it can been seen from the graph, the self tuning controller stabilised the temperature faster.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1362"
+  HREF="node98.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1360"
+  HREF="node96.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1354"
+  HREF="node96.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1363"
+  HREF="node98.html">PI Controller using Ziegler</A>
+<B> Up:</B> <A NAME="tex2html1361"
+  HREF="node96.html">Set Point Tracking</A>
+<B> Previous:</B> <A NAME="tex2html1355"
+  HREF="node96.html">Set Point Tracking</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

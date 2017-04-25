@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Set Point Tracking</TITLE>
+<META NAME="description" CONTENT="Set Point Tracking">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node101.html">
+<LINK REL="previous" HREF="node92.html">
+<LINK REL="up" HREF="node77.html">
+<LINK REL="next" HREF="node97.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1348"
+  HREF="node97.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1346"
+  HREF="node77.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1340"
+  HREF="node95.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1349"
+  HREF="node97.html">PI Controller Designed by</A>
+<B> Up:</B> <A NAME="tex2html1347"
+  HREF="node77.html">Design and Implementation of</A>
+<B> Previous:</B> <A NAME="tex2html1341"
+  HREF="node95.html">Self Tuning Controller</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00960000000000000000">
+Set Point Tracking</A>
+</H1>
+
+<P>
+The main aim of the controller is to track the set point and to reject disturbances. When the set point of the controlled
+variable (temperature in this case) is changed, the controller should work in such a manner that the actual temperature
+follows the set point as close as possible.
+<BR>
+<P>
+In this project, several experiments were conducted with the self tuning and conventional PI/PID Controllers. 
+Table <A HREF="#spt">9.3</A> shows the set point changes given during the various experiments that were conducted with conventional 
+and self tuning controllers designed using several methods.
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="3886"></A>
+<TABLE>
+<CAPTION><STRONG>Table 9.3:</STRONG>
+Set point changes in experiments conducted for set point tracking</CAPTION>
+<TR><TD>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+		<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">Conventional Controller</TD>
+<TD ALIGN="CENTER">Self Tuning Controller</TD>
+</TR>
+<TR><TD ALIGN="CENTER">Direct Synthesis PI</TD>
+<TD ALIGN="CENTER">32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to <SPAN CLASS="MATH"><IMG
+ WIDTH="31" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img424.png"
+ ALT="$ 37^0$"></SPAN>C</TD>
+<TD ALIGN="CENTER">32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 37<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+</TR>
+<TR><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">35<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+<TD ALIGN="CENTER">35<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+</TR>
+<TR><TD ALIGN="CENTER">Ziegler Nichols PI</TD>
+<TD ALIGN="CENTER">32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 37<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+<TD ALIGN="CENTER">32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 37<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+</TR>
+<TR><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">35<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+<TD ALIGN="CENTER">35<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+</TR>
+<TR><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">40<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+<TD ALIGN="CENTER">35<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+</TR>
+<TR><TD ALIGN="CENTER">Ziegler Nichols PID</TD>
+<TD ALIGN="CENTER">31<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+<TD ALIGN="CENTER">32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 46<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+</TR>
+<TR><TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 37<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+<TD ALIGN="CENTER">32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 37<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</TD>
+</TR>
+</TABLE>
+	
+	<A NAME="spt"></A>
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html1350"
+  HREF="node97.html">PI Controller Designed by Direct Synthesis</A>
+<LI><A NAME="tex2html1351"
+  HREF="node98.html">PI Controller using Ziegler Nichols Tuning</A>
+<LI><A NAME="tex2html1352"
+  HREF="node99.html">PID Controller using Ziegler Nichols Tuning</A>
+<LI><A NAME="tex2html1353"
+  HREF="node100.html">Conclusion</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1348"
+  HREF="node97.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1346"
+  HREF="node77.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1340"
+  HREF="node95.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1349"
+  HREF="node97.html">PI Controller Designed by</A>
+<B> Up:</B> <A NAME="tex2html1347"
+  HREF="node77.html">Design and Implementation of</A>
+<B> Previous:</B> <A NAME="tex2html1341"
+  HREF="node95.html">Self Tuning Controller</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

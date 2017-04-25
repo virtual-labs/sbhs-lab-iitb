@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Controlling Single Board Heater System using PID controller</TITLE>
+<META NAME="description" CONTENT="Controlling Single Board Heater System using PID controller">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node54.html">
+<LINK REL="previous" HREF="node23.html">
+<LINK REL="up" HREF="sbhs-new-manual.html">
+<LINK REL="next" HREF="node29.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html589"
+  HREF="node29.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html587"
+  HREF="sbhs-new-manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html581"
+  HREF="node27.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html590"
+  HREF="node29.html">Theory</A>
+<B> Up:</B> <A NAME="tex2html588"
+  HREF="sbhs-new-manual.html">sbhs-new-manual</A>
+<B> Previous:</B> <A NAME="tex2html582"
+  HREF="node27.html">Procedure</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00500000000000000000">
+Controlling Single Board Heater System using PID controller</A>
+</H1>
+The aim of this experiment is to apply a PID controller to the Single Board Heater System. 
+The target group is anyone who has basic knowledge of control engineering.
+<BR>
+<DIV ALIGN="CENTER"><A NAME="Xcos_pid"></A><A NAME="1419"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5.1:</STRONG>
+Xcos interface for this experiment</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="622" HEIGHT="491" ALIGN="BOTTOM" BORDER="0"
+ SRC="./pid_xcos.png"
+ ALT="Image pid_xcos"></TD></TR>
+</TABLE>
+</DIV>
+Scilab is used with Xcos as an interface for sending and receiving data. 
+This interface is shown in figure <A HREF="#Xcos_pid">5.1</A>. Heater current and fan speed are the two inputs to the system. 
+The inputs are provided in percentage of maximum output. The parameters related to PID controller <!-- MATH
+ $(K,\tau_i,\tau_d)$
+ -->
+<SPAN CLASS="MATH"><IMG
+ WIDTH="77" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img102.png"
+ ALT="$ (K,\tau_i,\tau_d)$"></SPAN> can be set in Xcos. 
+In this experiment, the fan speed is kept constant. The output temperature profile, read by the sensor, is also plotted. 
+The data acquired in the process is stored on the local drive and is available to the user for further calculations.
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html591"
+  HREF="node29.html">Theory</A>
+<UL>
+<LI><A NAME="tex2html592"
+  HREF="node30.html">Proportional Control Action</A>
+<LI><A NAME="tex2html593"
+  HREF="node31.html">Integral Control Action</A>
+<LI><A NAME="tex2html594"
+  HREF="node32.html">Derivative Control Action</A>
+<LI><A NAME="tex2html595"
+  HREF="node33.html">Ziegler-Nichols Rule for Tuning PID Controllers</A>
+<UL>
+<LI><A NAME="tex2html596"
+  HREF="node34.html">First Method</A>
+<LI><A NAME="tex2html597"
+  HREF="node35.html">Second Method</A>
+</UL>
+</UL>
+<BR>
+<LI><A NAME="tex2html598"
+  HREF="node36.html">PI Controller using Trapezoidal Approximation</A>
+<UL>
+<LI><A NAME="tex2html599"
+  HREF="node37.html">Implementing locally</A>
+<LI><A NAME="tex2html600"
+  HREF="node38.html">Implementing virtually</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html601"
+  HREF="node39.html">Implementing PI Controller using Backward Difference Approximation</A>
+<UL>
+<LI><A NAME="tex2html602"
+  HREF="node40.html">Implementing locally</A>
+<LI><A NAME="tex2html603"
+  HREF="node41.html">Implementing virtually</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html604"
+  HREF="node42.html">Implementing PI Controller using Forward Difference Approximation</A>
+<UL>
+<LI><A NAME="tex2html605"
+  HREF="node43.html">Implementing locally</A>
+<LI><A NAME="tex2html606"
+  HREF="node44.html">Implementing virtually</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html607"
+  HREF="node45.html">Implementing PID Controller using Backward Difference Approximation</A>
+<UL>
+<LI><A NAME="tex2html608"
+  HREF="node46.html">Implementing locally</A>
+<LI><A NAME="tex2html609"
+  HREF="node47.html">Implementing virtually</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html610"
+  HREF="node48.html">Implementing PID Controller using Trapezoidal Approximation for Integral Mode and Backward Difference Approximation 
+for the Derivative Mode</A>
+<UL>
+<LI><A NAME="tex2html611"
+  HREF="node49.html">Implementing locally</A>
+<LI><A NAME="tex2html612"
+  HREF="node50.html">Implementing virtually</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html613"
+  HREF="node51.html">Implementing PID Controller with Filtering using Backward Difference Approximation</A>
+<UL>
+<LI><A NAME="tex2html614"
+  HREF="node52.html">Implementing locally</A>
+<LI><A NAME="tex2html615"
+  HREF="node53.html">Implementing virtually</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

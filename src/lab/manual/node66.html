@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Conducting PRBS Test on SBHS, virtually</TITLE>
+<META NAME="description" CONTENT="Conducting PRBS Test on SBHS, virtually">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node67.html">
+<LINK REL="previous" HREF="node65.html">
+<LINK REL="up" HREF="node62.html">
+<LINK REL="next" HREF="node67.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1009"
+  HREF="node67.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1007"
+  HREF="node62.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1001"
+  HREF="node65.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1010"
+  HREF="node67.html">Determination of Discrete Time</A>
+<B> Up:</B> <A NAME="tex2html1008"
+  HREF="node62.html">PRBS Modeling and Implementation</A>
+<B> Previous:</B> <A NAME="tex2html1002"
+  HREF="node65.html">Conducting PRBS Test on</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00730000000000000000">
+Conducting PRBS Test on SBHS, virtually</A>
+</H1>
+The detailed procedure to perform a virtual experiment is explained in Chapter<A HREF="#virtual"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/local/share/lib/latex2html/icons/crossref.png"></A>. A summary of the same is provided in section <A HREF="node2.html#vlabsexpt">1.1</A>. It is same for this section with following changes.
+
+<P>
+
+<OL>
+<LI>Step1: The working directory is <TT>prbs/identification</TT>. Open this directory.
+</LI>
+<LI>Step2: Same
+</LI>
+<LI>Step3: Same
+</LI>
+<LI>Step4:  Switch to the working experiment directory and double-click on the file <TT>prbstest.sce</TT>. This will launch scilab and also open the file <TT>prbstest.sce</TT> in the scilab editor. Linux users will have to launch scilab manually. They also have to change the working directory to <TT>prbs/identification</TT> and then open the <TT>prbstest.sce</TT> file in the scilab editor.
+</LI>
+<LI>Step5:  Load the functions available in common files directory by executing the command <TT>getd&lt;space&gt;..&#92;..&#92;common_files </TT>
+</LI>
+<LI>Step6: Execute the file <TT>prbstest.sce</TT>.  Expect the prbs test xcos diagram to open automatically. If this doesnt happen, check the scilab console for error message.
+</LI>
+<LI>Step7: Execute the prbstest xcos diagram.
+</LI>
+<LI>Step8: Same
+</LI>
+</OL>
+
+<P>
+The virtual experiment response is shown in figure <A HREF="#prbs-res">7.5</A>. The corresponding data file is shown in table <A HREF="#prbs-data-virtual">7.2</A>. The time stamps shown are cut short for better viewing. This data file can be found in <TT>prbs/identification</TT> folder for virtual experiments. The name of this file is <TT>prbs-data-virtual.txt</TT>.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="prbs-data-virtual"></A><A NAME="2986"></A>
+<TABLE>
+<CAPTION><STRONG>Table 7.2:</STRONG>
+PRBS data obtained after performing virtual PRBS Test</CAPTION>
+<TR><TD><IMG
+ WIDTH="669" HEIGHT="130" BORDER="0"
+ SRC="img345.png"
+ ALT="\begin{table}
+\begin{verbatim}
+0 0 100 28.40 14...1731 14...4105 14...4123 14...
+......7712 14...0115 14...0133 14...7743 0.98400E+03\end{verbatim}
+\end{table}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="prbs-fig"></A><A NAME="2991"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.4:</STRONG>
+A Pseudo Random Binary Sequence</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="1307" HEIGHT="637" ALIGN="BOTTOM" BORDER="0"
+ SRC="./prbs-illustration.png"
+ ALT="Image prbs-illustration"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="prbs-res"></A><A NAME="2996"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.5:</STRONG>
+PRBS testing response for virtual experiment</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="610" HEIGHT="460" ALIGN="BOTTOM" BORDER="0"
+ SRC="./prbs-virtual.png"
+ ALT="Image prbs-virtual"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1009"
+  HREF="node67.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1007"
+  HREF="node62.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1001"
+  HREF="node65.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1010"
+  HREF="node67.html">Determination of Discrete Time</A>
+<B> Up:</B> <A NAME="tex2html1008"
+  HREF="node62.html">PRBS Modeling and Implementation</A>
+<B> Previous:</B> <A NAME="tex2html1002"
+  HREF="node65.html">Conducting PRBS Test on</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

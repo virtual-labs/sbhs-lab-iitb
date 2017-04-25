@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Issues with Step Test and an Alternate Approach</TITLE>
+<META NAME="description" CONTENT="Issues with Step Test and an Alternate Approach">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="previous" HREF="node63.html">
+<LINK REL="up" HREF="node63.html">
+<LINK REL="next" HREF="node65.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html989"
+  HREF="node65.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html987"
+  HREF="node63.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html983"
+  HREF="node63.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html990"
+  HREF="node65.html">Conducting PRBS Test on</A>
+<B> Up:</B> <A NAME="tex2html988"
+  HREF="node63.html">PRBS Modelling</A>
+<B> Previous:</B> <A NAME="tex2html984"
+  HREF="node63.html">PRBS Modelling</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00711000000000000000">
+Issues with Step Test and an Alternate Approach</A>
+</H2>
+
+<P>
+SBHS is an example of a heater. Suppose you are working in a full scale plant. Current control system designed to control
+one of the heaters of the plant is lousy and your supervisor asks you to design a new controller from scratch. The first step
+you need to do is identification of the heater transfer function. The catch is, the plant is currently
+operational. You can't shut the plant down to identify the heater transfer function. You have to do it while the heater is
+operating in the plant. You might think of giving the heater a positive step and measuring the response in the controlled 
+temperature. This will increase the temperature of the component being heated for the period of time step is applied. However,
+if the process is sensitive to temperature of the component (distillation, for example), it will go off the desired course and
+the output of the whole plant will be affected and will be undesirable.
+<BR>
+<P>
+There is an alternate approach which is widely used in industry. The input given to the heater for identification is not 
+step, but a <SPAN  CLASS="textbf">pseudo-random binary sequence (PRBS)</SPAN>. The concept behind PRBS is that the input is perturbed in such
+a way that the time average of the input is the value at which it is being operated currently. Thus, some positive and some
+negative steps can be given. This results in some positive and some negative changes in the temperature which leads to the time
+average of the performance of the plant remaining the same. Thus, PRBS testing can be done in a working plant without 
+affecting the plant performance unlike step testing. A typical PRBS and corresponding plant output is shown in 
+figure <A HREF="#sample-prbs">7.2</A>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="sample-prbs"></A><A NAME="3148"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.2:</STRONG>
+PRBS testing input and output <SPAN  CLASS="textit">[Image source: CL 686 Advanced
+Process Control, Spring 2013-14 lecture slides. Prof. S. C. Patwardhan, IIT Bombay]</SPAN></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+<IMG
+  WIDTH="407" HEIGHT="342" ALIGN="BOTTOM" BORDER="0"
+ SRC="./PRBS.jpg"
+ ALT="Image PRBS">
+</DIV>
+<P>
+<DIV ALIGN="CENTER">
+</DIV>
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html989"
+  HREF="node65.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html987"
+  HREF="node63.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html983"
+  HREF="node63.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html990"
+  HREF="node65.html">Conducting PRBS Test on</A>
+<B> Up:</B> <A NAME="tex2html988"
+  HREF="node63.html">PRBS Modelling</A>
+<B> Previous:</B> <A NAME="tex2html984"
+  HREF="node63.html">PRBS Modelling</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

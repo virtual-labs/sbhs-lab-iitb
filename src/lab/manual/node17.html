@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Identification of Transfer Function of a Single Board Heater System through Ramp Response Experiment</TITLE>
+<META NAME="description" CONTENT="Identification of Transfer Function of a Single Board Heater System through Ramp Response Experiment">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node23.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="sbhs-new-manual.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html476"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html474"
+  HREF="sbhs-new-manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html468"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html477"
+  HREF="node18.html">Conducting Ramp Test on</A>
+<B> Up:</B> <A NAME="tex2html475"
+  HREF="sbhs-new-manual.html">sbhs-new-manual</A>
+<B> Previous:</B> <A NAME="tex2html469"
+  HREF="node16.html">Discussion</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00300000000000000000"></A><A NAME="chap2"></A>
+<BR>
+Identification of Transfer Function of a Single Board Heater System through Ramp Response Experiment
+</H1>
+The aim of this experiment is to perform ramp test on a Single Board Heater System and to identify system transfer 
+function using ramp response data. The target group is anyone who has basic knowledge of control engineering.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="Xcos_rt"></A><A NAME="734"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.1:</STRONG>
+Xcos for ramp test experiment</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="519" HEIGHT="261" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ramp_test.jpg"
+ ALT="Image ramp_test"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="739"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3.2:</STRONG>
+Screen shot of ramp test experiment</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="620" HEIGHT="405" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ramp-test.png"
+ ALT="Image ramp-test"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+We have used Scilab and Xcos as an interface for sending and receiving data. 
+Xcos diagram is shown in figure <A HREF="#Xcos_rt">3.1</A>. Heater current and fan speed are the two inputs for this system. 
+They are given in percentage of maximum. These inputs can be varied by setting the properties of the input block's properties 
+in Xcos. The plots of their amplitude versus number of collected samples are also available on the scope windows. 
+The output temperature profile, as read by the sensor, is also plotted. The data acquired in the process is stored on the 
+local drive and is available to the user for further calculations.
+
+<P>
+In the <TT>ramp_test.xcos</TT> file, open the heater block's parameters to give a ramp input to the system with some value for slope. For this experiment, we have chosen slope = <SPAN CLASS="MATH"><IMG
+ WIDTH="29" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$ 0.1$"></SPAN>. Double click on the ramp input block labled as <TT>Heater input</TT>. Change the following values in the respective fields: slope = 0.1, start time = 200, initial output = 20. Keep the fan constant at 100.
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="rampdata"></A><A NAME="747"></A>
+<TABLE>
+<CAPTION><STRONG>Table 3.1:</STRONG>
+Ramp data obtained after performing local Step Test</CAPTION>
+<TR><TD><IMG
+ WIDTH="569" HEIGHT="130" BORDER="0"
+ SRC="img53.png"
+ ALT="\begin{table}\begin{verbatim}1.0 30.0 50.0 28.1 1416462726532.0
+2.0 30.0 50.0 ...
+...1416463723533.0
+1000.0 100.0 50.0 47.6 1416463724533.0\end{verbatim}
+\end{table}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+The ramp test data file will be saved in <TT>Ramp_Test</TT> folder. The name of the file will be the date and time at which the experiment was conducted. A sample data file is provided in the same folder. The sample data file is named as <TT>ramp-data-local.txt</TT> and <TT>ramp-data-virtual.txt</TT>. Refer to the one depending on wheather you are performing a local or a virtual experiment. Referring to the data file thus obtained as shown in table <A HREF="node25.html#rampdata">4.2</A>, the first column in this table denotes samples. The second column in this table denotes heater in percentage. It starts at 30 and increases with a step size of 10 units. The third column denotes the fan in percentage. It has been held constant at 50 percent. The fourth column refers to the value of temperature. The fifth column denotes time stamp. The virtual data file will have four time stamp columns apart from first 3 columns. These four time stamp columns are client departure, server arrival, server departure and client arrival. These can be used for advanced control algorithms. These additional time stamps exist in virtual mode because of the presense of network delay.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html478"
+  HREF="node18.html">Conducting Ramp Test on SBHS locally</A>
+<LI><A NAME="tex2html479"
+  HREF="node19.html">Conducting Ramp Test on SBHS, virtually</A>
+<LI><A NAME="tex2html480"
+  HREF="node20.html">Identifying First Order Transfer Function</A>
+<UL>
+<LI><A NAME="tex2html481"
+  HREF="node21.html">Procedure</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html482"
+  HREF="node22.html">Discussion</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html476"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html474"
+  HREF="sbhs-new-manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html468"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html477"
+  HREF="node18.html">Conducting Ramp Test on</A>
+<B> Up:</B> <A NAME="tex2html475"
+  HREF="sbhs-new-manual.html">sbhs-new-manual</A>
+<B> Previous:</B> <A NAME="tex2html469"
+  HREF="node16.html">Discussion</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>PID Controller using Ziegler Nichols Tuning</TITLE>
+<META NAME="description" CONTENT="PID Controller using Ziegler Nichols Tuning">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node100.html">
+<LINK REL="previous" HREF="node98.html">
+<LINK REL="up" HREF="node96.html">
+<LINK REL="next" HREF="node100.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1382"
+  HREF="node100.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1380"
+  HREF="node96.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1374"
+  HREF="node98.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1383"
+  HREF="node100.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html1381"
+  HREF="node96.html">Set Point Tracking</A>
+<B> Previous:</B> <A NAME="tex2html1375"
+  HREF="node98.html">PI Controller using Ziegler</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00963000000000000000"></A><A NAME="pidzn"></A>
+<BR>
+PID Controller using Ziegler Nichols Tuning
+</H2>
+The results of the of the experiments carried out for the self tuning PID controller using Ziegler Nichols tuning method 
+are shown. The upper plot shows the variations of the set point temperature (the black line) and the actual temperature 
+(the purple line) in the SBHS. The lower plot shows the control effort.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="3937"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.24:</STRONG>
+Result for self tuning PID controller designed using Ziegler Nichols Tuning for set point going from 32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 37<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="781" HEIGHT="329" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step32to37.jpg"
+ ALT="Image step32to37"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="3941"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.25:</STRONG>
+Result for self tuning PID controller designed using Ziegler Nichols Tuning for set point going from 32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 46<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="781" HEIGHT="329" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step32to46.jpg"
+ ALT="Image step32to46"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+From the graph it can be seen that for both the experiments, the self tuning PID controller is able to keep the 
+temperature close to the set point and the stabilisation is also fast. For comparison, plots for experiments conducted with 
+conventional PID controller designed using Ziegler Nichols method are also shown.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:step31to45"></A><A NAME="3945"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.26:</STRONG>
+Result for conventional PID controller designed using Ziegler Nichols Tuning for set point going from 32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 37<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="844" HEIGHT="329" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step32to37.jpg"
+ ALT="Image step32to37"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:step31to45"></A><A NAME="3950"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.27:</STRONG>
+Result for conventional PID controller designed using Ziegler Nichols Tuning for set point going from 31<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="781" HEIGHT="329" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step31to45.jpg"
+ ALT="Image step31to45"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+From the graph, we can see that the conventional PID controller is not able to make the temperature close to the set point 
+when the set point value is 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C. The self tuning PID controller had successfully brought the temperature to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1382"
+  HREF="node100.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1380"
+  HREF="node96.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1374"
+  HREF="node98.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1383"
+  HREF="node100.html">Conclusion</A>
+<B> Up:</B> <A NAME="tex2html1381"
+  HREF="node96.html">Set Point Tracking</A>
+<B> Previous:</B> <A NAME="tex2html1375"
+  HREF="node98.html">PI Controller using Ziegler</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

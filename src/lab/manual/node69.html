@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Determination of Second order Discrete time Transfer Function</TITLE>
+<META NAME="description" CONTENT="Determination of Second order Discrete time Transfer Function">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node70.html">
+<LINK REL="previous" HREF="node68.html">
+<LINK REL="up" HREF="node62.html">
+<LINK REL="next" HREF="node70.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1039"
+  HREF="node70.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1037"
+  HREF="node62.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1031"
+  HREF="node68.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1040"
+  HREF="node70.html">Implementing 2DOF pole-placement controller</A>
+<B> Up:</B> <A NAME="tex2html1038"
+  HREF="node62.html">PRBS Modeling and Implementation</A>
+<B> Previous:</B> <A NAME="tex2html1032"
+  HREF="node68.html">Determination of First order</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00760000000000000000">
+Determination of Second order Discrete time Transfer Function</A>
+</H1>
+
+<OL>
+<LI>Download the Analysis folder from the sbhs website. It will be available under <TT>downloads</TT> section.  Download the file for <TT>SBHS Analysis Code (local &amp; virtual)</TT>. The name of the file is <TT>scilab_codes_analysis</TT>. The download will be in zip format. Extrat the downloaded zip file. You will get a folder <TT>scilab_codes_analysis</TT>. 
+</LI>
+<LI>Open the <TT>scilab_codes_analysis</TT> folder and then locate and open the folder <TT>Step_Analysis</TT>.
+</LI>
+<LI>Inside this folder, locate and open the folder <TT>Discrete-order2</TT>
+</LI>
+<LI>Copy the prbs test data file to this folder.
+</LI>
+<LI>Start scilab and change the working directory to  <TT>Discrete-order2</TT>
+</LI>
+<LI>Open the file <TT>optimize.sce</TT> in scilab editor and enter the name of the data file (with extention) in the <TT>filename</TT> field. 
+</LI>
+<LI>Save and run this code and obtain the plot as shown in figure <A HREF="#prbs-2-fit">7.8</A>. This plot will also show the second order discrete time transfer function's coefficients a1, a2, b1 and b2.
+</LI>
+<LI>The values are also shown on scilab console as shown in figure <A HREF="#prbs-2-model">7.9</A> 
+</LI>
+</OL>
+
+<P>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR>
+<TD COLSPAN=2 ALIGN="LEFT">
+<BR>
+The results presented are obtained for the data file <TT>prbs-data-virtual.txt</TT>. This data file is present under the <TT>prbs</TT> directory for virtual experiments.The plot thus obtained is reasonably good. See the Scilab plot to get the values of <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img353.png"
+ ALT="$ a1$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img356.png"
+ ALT="$ a2$"></SPAN>, <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img354.png"
+ ALT="$ b1$"></SPAN> and <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img357.png"
+ ALT="$ b2$"></SPAN>. 
+The figure <A HREF="#prbs-2-fit">7.8</A> shows a screen shot of the same. We obtain <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img353.png"
+ ALT="$ a1$"></SPAN> = -1.82, <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img356.png"
+ ALT="$ a2$"></SPAN>= 0.833, <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img354.png"
+ ALT="$ b1$"></SPAN> = 0.0017, <SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img357.png"
+ ALT="$ b2$"></SPAN>= -0.00086, . The transfer function obtained here is at the operating point of 50 percentage of heat. If the experiment is repeated at a different operating point, the transfer function obtained will be different. The gain will correspondingly be more at a higher operating point. 
+This means that the plant is faster at higher temperature. Thus the transfer function of the plant varies with the operating 
+point. Let the transfer function we obtain in this experiment be denoted as <SPAN CLASS="MATH"><IMG
+ WIDTH="39" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img231.png"
+ ALT="$ G(z)$"></SPAN>. We obtain<P>
+<BR></TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="270" HEIGHT="65" ALIGN="MIDDLE" BORDER="0"
+ SRC="img358.png"
+ ALT="$\displaystyle G(z)=\frac{0.0017 -0.00086z^{-1}}{1-1.826z^{-1}+0.833z^{-2}}z^{-5}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">7</SPAN>.<SPAN CLASS="arabic">5</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="prbs-2-fit"></A><A NAME="3089"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.8:</STRONG>
+PRBS second order fit</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="958" HEIGHT="644" ALIGN="BOTTOM" BORDER="0"
+ SRC="./prbs-2-fit.png"
+ ALT="Image prbs-2-fit"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="prbs-2-model"></A><A NAME="3094"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.9:</STRONG>
+PRBS second order model</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="819" HEIGHT="467" ALIGN="BOTTOM" BORDER="0"
+ SRC="./prbs-2-model.png"
+ ALT="Image prbs-2-model"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1039"
+  HREF="node70.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1037"
+  HREF="node62.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1031"
+  HREF="node68.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1040"
+  HREF="node70.html">Implementing 2DOF pole-placement controller</A>
+<B> Up:</B> <A NAME="tex2html1038"
+  HREF="node62.html">PRBS Modeling and Implementation</A>
+<B> Previous:</B> <A NAME="tex2html1032"
+  HREF="node68.html">Determination of First order</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

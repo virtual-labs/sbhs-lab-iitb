@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Performing pure simulation of 2DOF controller</TITLE>
+<META NAME="description" CONTENT="Performing pure simulation of 2DOF controller">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="previous" HREF="node60.html">
+<LINK REL="up" HREF="node54.html">
+<LINK REL="next" HREF="node62.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html951"
+  HREF="node62.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html949"
+  HREF="node54.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html945"
+  HREF="node60.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html952"
+  HREF="node62.html">PRBS Modeling and Implementation</A>
+<B> Up:</B> <A NAME="tex2html950"
+  HREF="node54.html">Two Degrees of Freedom</A>
+<B> Previous:</B> <A NAME="tex2html946"
+  HREF="node60.html">Implementing 2-DOF Controller on</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00640000000000000000">
+Performing pure simulation of 2DOF controller</A>
+</H1>
+You can also use the Xcos file <TT>twodof_simulation.xcos</TT>, shown in figure <A HREF="#2dof-sim-xcos">6.4</A>, to simulate your controller before implementing on SBHS. This will help you validate your controller. You need to execute <TT>getd dc/scilab</TT> and then execute the file <TT>twodof_para.sce</TT>. Now run <TT>twodof_simulation.xcos</TT>. Figure <A HREF="#2dof-sim-res">6.5</A> shows the simulation results. Note that, execution of this Xcos file is not mandatory for performing a virtual experiment.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="2dof-sim-xcos"></A><A NAME="2601"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.4:</STRONG>
+Xcos diagram for simulating 2-DOF controller</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="685" HEIGHT="607" ALIGN="BOTTOM" BORDER="0"
+ SRC="./2dof-sim-xcos.png"
+ ALT="Image 2dof-sim-xcos"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="2dof-sim-res"></A><A NAME="2659"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.5:</STRONG>
+Simulation results after executing  <TT>twodof_simulation.xcos</TT></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="610" HEIGHT="460" ALIGN="BOTTOM" BORDER="0"
+ SRC="./2dof-sim-result.png"
+ ALT="Image 2dof-sim-result"></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="2dof-para-out"></A><A NAME="2611"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.6:</STRONG>
+Scilab output for <TT>twodof_para.sce</TT></CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="577" HEIGHT="495" ALIGN="BOTTOM" BORDER="0"
+ SRC="./sci-console.png"
+ ALT="Image sci-console"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="2dof-xcos"></A><A NAME="2616"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.7:</STRONG>
+Xcos diagram for 2-DOF controller</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="555" HEIGHT="380" ALIGN="BOTTOM" BORDER="0"
+ SRC="./2dof-xcos.png"
+ ALT="Image 2dof-xcos"></TD></TR>
+</TABLE>
+</DIV>
+The performance of the controller is shown in figure <A HREF="#rt_127">6.8</A>. 
+
+<DIV ALIGN="CENTER"><A NAME="rt_127"></A><A NAME="2622"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6.8:</STRONG>
+Implementation of 2-DOF controller</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="610" HEIGHT="460" ALIGN="BOTTOM" BORDER="0"
+ SRC="./2dof_resp.png"
+ ALT="Image 2dof_resp"></TD></TR>
+</TABLE>
+</DIV>
+It is seen that the output (temperature) tracks the setpoint irrespective of the step changes in the fan speed.
+We see that the overshoot turns out to be 6% and rise time turns out to be 60 seconds, which is acceptable.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html951"
+  HREF="node62.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html949"
+  HREF="node54.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html945"
+  HREF="node60.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html952"
+  HREF="node62.html">PRBS Modeling and Implementation</A>
+<B> Up:</B> <A NAME="tex2html950"
+  HREF="node54.html">Two Degrees of Freedom</A>
+<B> Previous:</B> <A NAME="tex2html946"
+  HREF="node60.html">Implementing 2-DOF Controller on</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

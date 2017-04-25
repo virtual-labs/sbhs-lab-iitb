@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Implementing MPC</TITLE>
+<META NAME="description" CONTENT="Implementing MPC">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node111.html">
+<LINK REL="previous" HREF="node109.html">
+<LINK REL="up" HREF="node108.html">
+<LINK REL="next" HREF="node111.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1518"
+  HREF="node111.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1516"
+  HREF="node108.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1510"
+  HREF="node109.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1519"
+  HREF="node111.html">Experiments conducted to implement</A>
+<B> Up:</B> <A NAME="tex2html1517"
+  HREF="node108.html">Model Predictive Control in</A>
+<B> Previous:</B> <A NAME="tex2html1511"
+  HREF="node109.html">MPC theory</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001020000000000000000">
+Implementing MPC</A>
+</H1>
+
+<P>
+There are three main codes, which are being used for this experiment. <SPAN  CLASS="textit">mpc_init.sce</SPAN> is the code which opens the xcos window, wherein, we have step block for the set-point for temperature and the fan speed. Once the values have been entered into the xcos window and the simulation is started, the <SPAN  CLASS="textit">scifunc</SPAN> block of xcos calls the function <SPAN  CLASS="textit">mpc.sci</SPAN> after every sampling time. The <SPAN  CLASS="textit">mpc.sci</SPAN> in turn calls <SPAN  CLASS="textit">mpc_run.sci</SPAN> every time it is called by  <SPAN  CLASS="textit">scifunc</SPAN> block. The <SPAN  CLASS="textit">mpc_run.sci</SPAN> code optimizes manipulated variable (heater) over control horizon and returns only the first manipulated variable (heater) value. This new heater value is then sent to the heater of the SBHS to control the temperature at the set point.
+
+<P>
+When <SPAN  CLASS="textit">mpc_init.sce</SPAN> is executed in scilab, an xcos window opens up. The xcos window has two step input blocks. The first step input block on the left side, is for the Temperature set point and the second step input block is for the fan (disturbance variable). Also the sampling time can be entered via clock block present on the xcos. 
+<BR>
+For all the experiments done for this project, sampling time of 1 second was used (entered via clock block of xcos). 
+<BR>
+Refer to the figure below for a clear picture of the xcos.
+
+<DIV ALIGN="CENTER"><A NAME="4752"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 10.1:</STRONG>
+Screenshot of the xcos window with step input blocks labeled</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+  <IMG
+  WIDTH="473" HEIGHT="394" ALIGN="BOTTOM" BORDER="0"
+ SRC="./mpc_xcos.png"
+ ALT="Image mpc_xcos"></TD></TR>
+</TABLE>
+</DIV>
+After entering the values in the input step block, the simulation can be started. This opens up a graph, which shows the values of Temperature-set-point, fan and the actual temperature at each time instant during the simulation.
+
+<P>
+Other codes that were used other than <TT>mpc_run.sci</TT> for conducting this experiment are <SPAN  CLASS="textit">mpc_init.sce</SPAN> and <SPAN  CLASS="textit">mpc.sci</SPAN>. Both these codes were originally taken from Moodle (Process controls course for SBHS assignment). Please note that, both these codes were slightly modified to work with our MPC. 
+<BR>
+The only changes done in the original codes are:
+
+<UL>
+<LI>addition of global variables p,q and xk_old (p is the prediction horizon, q is the control horizon, xk_old represents the last value of an internal state)
+</LI>
+<LI>initialization of p, q and xk_old
+</LI>
+<LI>removal of some unnecessary lines (ie, lines not relevant to MPC implementation)
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1518"
+  HREF="node111.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1516"
+  HREF="node108.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1510"
+  HREF="node109.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1519"
+  HREF="node111.html">Experiments conducted to implement</A>
+<B> Up:</B> <A NAME="tex2html1517"
+  HREF="node108.html">Model Predictive Control in</A>
+<B> Previous:</B> <A NAME="tex2html1511"
+  HREF="node109.html">MPC theory</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

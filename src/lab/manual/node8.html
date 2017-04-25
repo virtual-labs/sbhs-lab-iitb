@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Identification of Transfer Function of a Single Board Heater System through Step Response Experiment</TITLE>
+<META NAME="description" CONTENT="Identification of Transfer Function of a Single Board Heater System through Step Response Experiment">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node17.html">
+<LINK REL="previous" HREF="node1.html">
+<LINK REL="up" HREF="sbhs-new-manual.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html381"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html379"
+  HREF="sbhs-new-manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html373"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html382"
+  HREF="node9.html">Conducting Step Test on</A>
+<B> Up:</B> <A NAME="tex2html380"
+  HREF="sbhs-new-manual.html">sbhs-new-manual</A>
+<B> Previous:</B> <A NAME="tex2html374"
+  HREF="node7.html">Summary</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00200000000000000000"></A><A NAME="chap1"></A>
+<BR>
+Identification of Transfer Function of a Single Board Heater System through Step Response Experiment
+</H1>
+The aim of this experiment is to perform step test on a Single Board Heater System and to identify system transfer 
+function using step response data. The target group is anyone who has basic knowledge of control engineering.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="xcos_st"></A><A NAME="347"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.1:</STRONG>
+Xcos for this experiment</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="525" HEIGHT="401" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step_xcos.jpg"
+ ALT="Image step_xcos"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fig:scope_st"></A><A NAME="352"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.2:</STRONG>
+Graph shows heater current, fan speed and output temperature</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="618" HEIGHT="376" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ste-test.png"
+ ALT="Image ste-test"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+We have used Scilab and Xcos as an interface for sending and receiving data. 
+Xcos diagram is shown in figure <A HREF="#xcos_st">2.1</A>. Heater current and fan speed are the two inputs for this system. 
+They are given in percentage of maximum. These inputs can be varied by setting the properties of the input block's properties 
+in Xcos. The plots of their amplitude versus number of collected samples are also available on the scope windows. 
+The output temperature profile, as read by the sensor, is also plotted. The data acquired in the process is stored on the 
+local drive and is available to the user for further calculations.
+
+<P>
+In the <TT>step_test.xcos</TT> file, open the heater block's parameters to apply a step change of say 10 percent to the heater at operating point of 30 percent of heater after 250 seconds. The block parameters of the step input block will have <TT>Step time = 250</TT>, <TT>Initial value = 30</TT> and <TT>Final value = 40</TT>. 
+Keep the fan input constant at 50 percent. Start the experiment and let it continue until you see the temperature 
+reach the steady state. 
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="stepdata"></A><A NAME="363"></A>
+<TABLE>
+<CAPTION><STRONG>Table 2.1:</STRONG>
+Step data obtained after performing local Step Test</CAPTION>
+<TR><TD><IMG
+ WIDTH="478" HEIGHT="130" BORDER="0"
+ SRC="img7.png"
+ ALT="\begin{table}\begin{verbatim}1.0 30.0 50.0 29.3 1412400132192.0
+2.0 30.0 50....
+...0 1412400950197.0
+821.0 40.0 50.0 37.2 1412400951202.0\end{verbatim}
+\end{table}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="step-virtual"></A><A NAME="368"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2.3:</STRONG>
+Step test Virtual experiment response</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="610" HEIGHT="460" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step-virtual.png"
+ ALT="Image step-virtual"></TD></TR>
+</TABLE>
+</DIV>
+The step test data file will be saved in <TT>Step_test</TT> folder. The name of the file will be the date and time at which the experiment was conducted. A sample data file is provided in the same folder. The sample data file is named as <TT>step-data-local.txt</TT> and <TT>step-data-virtual.txt</TT>. Refer to the one depending on wheather you are performing a local or a virtual experiment. Referring to the data file thus obtained as shown in table <A HREF="node10.html#stepdata">2.2</A>, the first column in this table denotes samples. The second column in this table denotes heater in percentage. It starts at 30 and increases with a step size of 10 units. The third column denotes the fan in percentage. It has been held constant at 50 percent. The fourth column refers to the value of temperature. The fifth column denotes time stamp. The virtual data file will havel four time stamp columns apart from first 3 columns. These four time stamp columns are client departure, server arrival, server departure and client arrival. These can be used for advanced control algorithms. These additional time stamps exist in virtual mode because of the presense of network delay.
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html383"
+  HREF="node9.html">Conducting Step Test on SBHS locally</A>
+<LI><A NAME="tex2html384"
+  HREF="node10.html">Conducting Step Test on SBHS, virtually</A>
+<LI><A NAME="tex2html385"
+  HREF="node11.html">Identifying First Order and Second Order Transfer Functions</A>
+<UL>
+<LI><A NAME="tex2html386"
+  HREF="node12.html">Determination of First Order Transfer Function</A>
+<LI><A NAME="tex2html387"
+  HREF="node13.html">Procedure</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html388"
+  HREF="node14.html">Determination of Second Order Transfer Function</A>
+<UL>
+<LI><A NAME="tex2html389"
+  HREF="node15.html">Procedure</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html390"
+  HREF="node16.html">Discussion</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html381"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html379"
+  HREF="sbhs-new-manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html373"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html382"
+  HREF="node9.html">Conducting Step Test on</A>
+<B> Up:</B> <A NAME="tex2html380"
+  HREF="sbhs-new-manual.html">sbhs-new-manual</A>
+<B> Previous:</B> <A NAME="tex2html374"
+  HREF="node7.html">Summary</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

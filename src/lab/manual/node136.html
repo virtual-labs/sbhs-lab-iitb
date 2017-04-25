@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>General Information on Experiments for this Project</TITLE>
+<META NAME="description" CONTENT="General Information on Experiments for this Project">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="previous" HREF="node135.html">
+<LINK REL="up" HREF="node108.html">
+<LINK REL="next" HREF="node137.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1784"
+  HREF="node137.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1782"
+  HREF="node108.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1778"
+  HREF="node135.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1785"
+  HREF="node137.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html1783"
+  HREF="node108.html">Model Predictive Control in</A>
+<B> Previous:</B> <A NAME="tex2html1779"
+  HREF="node135.html">Acknowledgement</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION0010120000000000000000">
+General Information on Experiments for this Project</A>
+</H1>
+All the experiments for this project was performed remotely on SBHS, using a sampling time of 1 second. Basic codes (mpc_init.sce and mpc.sci) was taken from moodle for this course. Code for implementing MPC was written in scilab and has been mentioned in the report. 
+<BR>
+<BR>
+Scilab Version used: 5.2.2 
+<BR>
+SBHS number: 12 (remotely used) 
+<BR>
+Sampling time: 1 second 
+<BR>
+<BR>
+<SPAN  CLASS="textit">For graphs</SPAN>: Until and unless mentioned, Graphic 1 represents the Temperature set point, Graphic 2 represents the Fan and Graphic 3 represents the Temperature.
+
+<P>
+Initially, open loop experiment was performed, and Plant Transfer function was obtained. For the open loop experiment, a step change in heater from 15 to 25 units at t =200 seconds was provided (sampling time 1s). The response data was fitted to a first order transfer function with a time delay and the following was observed: 
+<BR>
+Kp=0.37, time constant = 45s and delay = 7s. 
+<BR>
+<BR>
+<P>
+Using the above, we obtained the plant transfer function: 
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="140" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img433.png"
+ ALT="$\displaystyle G_{p}=\frac{0.37}{1+45s}e^{-7s}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+<A NAME="eqn2">(<SPAN CLASS="arabic">10</SPAN>.<SPAN CLASS="arabic">4</SPAN>)</A></TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<BR>
+<SPAN  CLASS="textbf">Scilab Method to calculate State Space matrices</SPAN>
+<BR>
+State space matrices for a transfer function can be calculated as follows using Scilab: 
+<BR>
+mpc/matrix.txt
+SScont (in the last line above), has the value of the required State Space matrices. (Please note: Time delays can not be directly handled in Scilab. So, for systems with delays, we will have to use alternate approach. Pade's approximation for time delay being one of the approach.) 
+<BR>
+The transfer function which we dervied for our SBHS was very close to the transfer function derived in an earlier attempt. So, using the values of A, B and C which were already calculated by him previously, we obtain the following exact values:
+
+<BR>
+<P><!-- MATH
+ \begin{displaymath}
+A =
+\left[ {\begin{array}{cccccccc}
+0.9780 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0  \\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0  \\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0  \\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0  \\
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0  \\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0  \\
+\end{array} } \right]
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="300" HEIGHT="295" ALIGN="MIDDLE" BORDER="0"
+ SRC="img434.png"
+ ALT="$\displaystyle A =
+\left[ {\begin{array}{cccccccc}
+0.9780 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 ...
+...&amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+\end{array} } \right]
+$">
+</DIV><P></P>
+
+<BR>
+<P><!-- MATH
+ \begin{displaymath}
+B =
+\left[ {\begin{array}{c}
+ 1  \\
+0 \\
+0  \\
+0  \\
+0  \\
+0  \\
+0  \\
+0  \\
+ \end{array} } \right]
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="79" HEIGHT="295" ALIGN="MIDDLE" BORDER="0"
+ SRC="img435.png"
+ ALT="$\displaystyle B =
+\left[ {\begin{array}{c}
+1 \\
+0 \\
+0 \\
+0 \\
+0 \\
+0 \\
+0 \\
+0 \\
+\end{array} } \right]
+$">
+</DIV><P></P>
+
+<BR>
+<P><!-- MATH
+ \begin{displaymath}
+C =
+\left[ {\begin{array}{cccccccc}
+ 0  & 0 & 0 & 0 & 0 & 0 & 0 & 0.0079
+ \end{array} } \right]
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="301" HEIGHT="55" ALIGN="MIDDLE" BORDER="0"
+ SRC="img436.png"
+ ALT="$\displaystyle C =
+\left[ {\begin{array}{cccccccc}
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0.0079
+\end{array} } \right]
+$">
+</DIV><P></P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1784"
+  HREF="node137.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1782"
+  HREF="node108.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1778"
+  HREF="node135.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1785"
+  HREF="node137.html">Bibliography</A>
+<B> Up:</B> <A NAME="tex2html1783"
+  HREF="node108.html">Model Predictive Control in</A>
+<B> Previous:</B> <A NAME="tex2html1779"
+  HREF="node135.html">Acknowledgement</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

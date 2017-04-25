@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Implementing 2DOF pole-placement controller using PRBS model, virtually</TITLE>
+<META NAME="description" CONTENT="Implementing 2DOF pole-placement controller using PRBS model, virtually">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node71.html">
+<LINK REL="previous" HREF="node69.html">
+<LINK REL="up" HREF="node62.html">
+<LINK REL="next" HREF="node71.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1049"
+  HREF="node71.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1047"
+  HREF="node62.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1041"
+  HREF="node69.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1050"
+  HREF="node71.html">Implementing 2DOF pole-placement controller</A>
+<B> Up:</B> <A NAME="tex2html1048"
+  HREF="node62.html">PRBS Modeling and Implementation</A>
+<B> Previous:</B> <A NAME="tex2html1042"
+  HREF="node69.html">Determination of Second order</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00770000000000000000">
+Implementing 2DOF pole-placement controller using PRBS model, virtually</A>
+</H1>
+
+<P>
+For deriving the Two degrees of freedom control law, please refer to the chapter <A HREF="node55.html#2dof">6.2</A>
+The controller was designed for the given transient conditions, rise time = 10 sec, overshoot = 0.1. The experimental result and performance of the controller for setpoint temperature change from 38.00 to 43.00 degree C, i.e. 5 degree C positive step change, has been shown below in Fig <A HREF="#2dof-controller">7.10</A>. The controller designed is not derived for the model explained in earlier sections.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="2dof-controller"></A><A NAME="3102"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.10:</STRONG>
+2dof controller response</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="1098" HEIGHT="604" ALIGN="BOTTOM" BORDER="0"
+ SRC="./prbs-2dof-controller.png"
+ ALT="Image prbs-2dof-controller"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+The parameters for the 2-DOF pole-placement controller obtained are shown here
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img359.png"
+ ALT="$\displaystyle Tc$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="281" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img360.png"
+ ALT="$\displaystyle = 1 - 1.9444137 z^{ -1} + 0.9447818 z^{ -2}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img361.png"
+ ALT="$\displaystyle Sc$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="352" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img362.png"
+ ALT="$\displaystyle = 0.0337719 - 0.0656666z^{ -1}+ 0.0319071z^ { -2}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img363.png"
+ ALT="$\displaystyle Rc$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="613" HEIGHT="42" ALIGN="MIDDLE" BORDER="0"
+ SRC="img364.png"
+ ALT="$\displaystyle = 10^{-9} (4377900 - 12034140 z^{ -1} + 11094713 z^ {-2} - 3436740.5 z^{-3} + 3.469D^{-09} z ^{-4}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD>&nbsp;</TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="252" HEIGHT="41" ALIGN="MIDDLE" BORDER="0"
+ SRC="img365.png"
+ ALT="$\displaystyle - 147850.06 z^ {-5} + 146117.57 z^{ -6} )$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="RIGHT"><SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img272.png"
+ ALT="$\displaystyle \gamma$"></SPAN></TD>
+<TD NOWRAP ALIGN="LEFT"><SPAN CLASS="MATH"><IMG
+ WIDTH="104" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img366.png"
+ ALT="$\displaystyle = 0.0337719$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+&nbsp;&nbsp;&nbsp;</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+
+<P>
+As can be observed from the graph of temperature vs. time (third subplot) in Fig <A HREF="#2dof-controller">7.10</A>, the overshoot criteria was satisfied very easily. The rise time criteria is observed to be more than 30 sec. This can be satisfied with experimentation.
+The paramenters are computed by the file <TT>twodof_para.sce</TT>.  
+
+<P>
+The steps to be followed to conduct PRBS test experiment virtually remains same as explained in section <A HREF="node2.html#vlabsexpt">1.1</A>. only for the following differences
+
+<UL>
+<LI>Step1: The working directory is <TT>prbs/controller</TT>. Open this directory.
+</LI>
+<LI>Step2: Same
+</LI>
+<LI>Step3: Same
+</LI>
+<LI>Step4:  Switch to the <TT>controller</TT> experiment directory and double-click on the file <TT>prbs.sce</TT>. This will launch scilab and also open the file <TT>prbs.sce</TT> in the scilab editor. Linux users will have to launch scilab manually. They also have to change the working directory to <TT>controller</TT> and then open the <TT>prbs.sce</TT> file in the scilab editor.
+</LI>
+<LI>Step5:  Load the functions available in common files directory by executing the command <TT>getd&lt;space&gt;..&#92;..&#92;common_files </TT>
+</LI>
+<LI>Step6: Execute the file <TT>prbs.sce</TT>.  Expect the prbs test xcos diagram to open automatically. If this doesnt happen, check the scilab console for error message. The values of Rc, Sc, Tc and <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img271.png"
+ ALT="$ \gamma$"></SPAN> are to be entered in the xcos diagram.
+</LI>
+<LI>Step7: Execute the prbstest xcos diagram.
+</LI>
+<LI>Step8: Same
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1049"
+  HREF="node71.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1047"
+  HREF="node62.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1041"
+  HREF="node69.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1050"
+  HREF="node71.html">Implementing 2DOF pole-placement controller</A>
+<B> Up:</B> <A NAME="tex2html1048"
+  HREF="node62.html">PRBS Modeling and Implementation</A>
+<B> Previous:</B> <A NAME="tex2html1042"
+  HREF="node69.html">Determination of Second order</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

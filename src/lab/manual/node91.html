@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Self Tuning Controller Design</TITLE>
+<META NAME="description" CONTENT="Self Tuning Controller Design">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="previous" HREF="node90.html">
+<LINK REL="up" HREF="node84.html">
+<LINK REL="next" HREF="node92.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1297"
+  HREF="node92.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1295"
+  HREF="node84.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1291"
+  HREF="node90.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1298"
+  HREF="node92.html">PID controller theory</A>
+<B> Up:</B> <A NAME="tex2html1296"
+  HREF="node84.html">Step Test Experiments and</A>
+<B> Previous:</B> <A NAME="tex2html1292"
+  HREF="node90.html">Conventional Controller Design</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00943000000000000000"></A>
+<A NAME="selftuningdesign"></A>
+<BR>
+Self Tuning Controller Design
+</H2>
+The graphs showing the variation of Kp and <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \tau _p$"></SPAN> are shown below:
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="kp"></A><A NAME="3775"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.9:</STRONG>
+Variation of <SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$ K_p$"></SPAN> with temperature</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+	<IMG
+  WIDTH="475" HEIGHT="273" ALIGN="BOTTOM" BORDER="0"
+ SRC="./kp.jpg"
+ ALT="Image kp"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="taup"></A><A NAME="3780"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.10:</STRONG>
+Variation of <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \tau _p$"></SPAN> with temperature</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+	<IMG
+  WIDTH="559" HEIGHT="273" ALIGN="BOTTOM" BORDER="0"
+ SRC="./taup.jpg"
+ ALT="Image taup"></TD></TR>
+</TABLE>
+</DIV>
+
+<OL>
+<LI><SPAN  CLASS="textbf">PI Controller using Ziegler Nichols Tuning:</SPAN> 
+<BR>
+<P>
+L = 6
+<BR>
+R = (0.016<SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$ \times$"></SPAN>T-0.114)/(66.90-0.415<SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$ \times$"></SPAN>T) where T is the temperature
+<BR>
+Kc = 0.9(66.90-0.415T)/6(0.016T-0.114) 
+<BR>
+		 = (60.21 - 0.3735T)/(0.096T - 0.684)
+<BR>
+	<SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$ \tau _i$"></SPAN> = 3 <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$ \times$"></SPAN> 6 = 18
+<BR>
+<P>
+</LI>
+<LI><SPAN  CLASS="textbf">PID Controller using Ziegler Nichols Tuning:</SPAN> 
+<BR>
+<P>
+L = 6
+<BR>
+R = (0.016 <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$ \times$"></SPAN> T-0.114)/(66.90-0.415 <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$ \times$"></SPAN> T) where T is the temperature
+<BR>
+K = 1.2(66.90-0.415T)/6(0.016T-0.114)
+<BR>
+		= (80.28 - 0.498T)/(0.096T - 0.684)
+<BR>
+	<SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$ \tau _i$"></SPAN> = 2 <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$ \times$"></SPAN> 6 = 12
+<BR>
+	<SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.png"
+ ALT="$ \tau _d$"></SPAN> = 0.5<SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$ \times$"></SPAN>6 = 3
+<BR>
+<P>
+</LI>
+<LI><SPAN  CLASS="textbf">PI Controller using Direct Synthesis (<SPAN CLASS="MATH"><IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img409.png"
+ ALT="$ \tau_{cl}$"></SPAN> is taken as <SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \tau _p$"></SPAN>/2):</SPAN>
+<BR>
+<P>
+K = 2/(0.016<SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$ \times$"></SPAN>T-0.114)
+<BR>
+	<SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$ \tau _i$"></SPAN> = (66.90-0.415<SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img410.png"
+ ALT="$ \times$"></SPAN>T) where T is the temperature
+<BR>
+<P>
+</LI>
+</OL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Procedure</TITLE>
+<META NAME="description" CONTENT="Procedure">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="previous" HREF="node26.html">
+<LINK REL="up" HREF="node26.html">
+<LINK REL="next" HREF="node28.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html579"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html577"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html573"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html580"
+  HREF="node28.html">Controlling Single Board Heater</A>
+<B> Up:</B> <A NAME="tex2html578"
+  HREF="node26.html">Frequency Analysis of sine</A>
+<B> Previous:</B> <A NAME="tex2html574"
+  HREF="node26.html">Frequency Analysis of sine</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00431000000000000000">
+Procedure</A>
+</H2>
+Now let us calculate amplitude ratio and phase difference. 
+
+<P>
+
+<OL>
+<LI>Download the Analysis folder from the sbhs website. It will be available under <TT>downloads</TT> section.  Download the file for <TT>SBHS Analysis Code (local &amp; virtual)</TT>. The name of the file is <TT>scilab_codes_analysis</TT>. The download will be in zip format. Extrat the downloaded zip file. You will get a folder <TT>scilab_codes_analysis</TT>. 
+</LI>
+<LI>Open the <TT>scilab_codes_analysis</TT> folder and then locate and open the folder <TT>Sine_Analysis</TT>.
+</LI>
+<LI>Copy the sine test data file to this folder.
+</LI>
+<LI>Change the Scilab working directory to  <TT>Sine_Analysis</TT>
+</LI>
+<LI>Open the file <TT>sine-analysis.sce</TT> in scilab editor and enter the name of the data file (with extention) in the <TT>filename</TT> field.
+</LI>
+<LI>Put the value of frequency <TT>f</TT> for the calculation of amplitude ratio and phase difference and execute it. Here <TT>f</TT> means input frequency.
+</LI>
+<LI>Expect the values of amplitude ratio and phase difference on the scilab console.
+</LI>
+</OL>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="scilab_op"></A><A NAME="1178"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.4:</STRONG>
+Amplitude ratio and Phase difference for local data file</CAPTION>
+<TR><TD><IMG
+  WIDTH="819" HEIGHT="534" ALIGN="BOTTOM" BORDER="0"
+ SRC="./sine-local-analysis-console.png"
+ ALT="Image sine-local-analysis-console"></TD></TR>
+</TABLE>
+</DIV>
+The results shown are for the data file sine-data-local.txt. It could be seen from figure <A HREF="#scilab_op">4.4</A> that the amplitude ratio turns out to be <SPAN CLASS="MATH"><IMG
+ WIDTH="60" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img100.png"
+ ALT="$ -0.915$"></SPAN>dB and phase difference to be <SPAN CLASS="MATH"><IMG
+ WIDTH="69" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img101.png"
+ ALT="$ -57.267$"></SPAN>&#176;.
+The plot thus obtained is shown in figure <A HREF="#plot0.4">4.5</A>
+
+<DIV ALIGN="CENTER"><A NAME="plot0.4"></A><A NAME="1186"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.5:</STRONG>
+Plot of Input and Output vs time</CAPTION>
+<TR><TD><IMG
+  WIDTH="610" HEIGHT="460" ALIGN="BOTTOM" BORDER="0"
+ SRC="./sine-local-analysis.png"
+ ALT="Image sine-local-analysis"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="bode_plot"></A><A NAME="1191"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.6:</STRONG>
+Bode plot obtained from the plant</CAPTION>
+<TR><TD><IMG
+  WIDTH="834" HEIGHT="631" ALIGN="BOTTOM" BORDER="0"
+ SRC="./bodeplot1.png"
+ ALT="Image bodeplot1"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Repeat this calculation over a range of frequencies and note down the values of amplitude ratio in dB and phase difference. 
+Input these values for the appropriate frequencies into the Scilab code <TT>TFbode.sce</TT> and execute it to get a 
+Bode plot of the plant which is illustrated in figure <A HREF="#bode_plot">4.6</A>.
+
+<P>
+Bode plot can be obtained directly from the plant's second order transfer function [<A
+ HREF="node137.html#kmm09">2</A>] with the help of Scilab code
+<TT>TFbode.sce</TT>, as shown in figure <A HREF="#tfbode">4.7</A>. A visual comparison of the two Bode plots can be done to 
+validate the Bode diagram obtained from the plant.
+
+<DIV ALIGN="CENTER"><A NAME="tfbode"></A><A NAME="1201"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.7:</STRONG>
+Bode plot obtained through plant's transfer function</CAPTION>
+<TR><TD><IMG
+  WIDTH="610" HEIGHT="460" ALIGN="BOTTOM" BORDER="0"
+ SRC="./plant_bode_tf.png"
+ ALT="Image plant_bode_tf"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+To compare the two plots, we plot it on the same graph as shown in figure <A HREF="#compare_bode">4.8</A>
+
+<DIV ALIGN="CENTER"><A NAME="compare_bode"></A><A NAME="1207"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4.8:</STRONG>
+Comparison of Bode plots</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="610" HEIGHT="460" ALIGN="BOTTOM" BORDER="0"
+ SRC="./bode_comparison.png"
+ ALT="Image bode_comparison"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html579"
+  HREF="node28.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html577"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html573"
+  HREF="node26.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html580"
+  HREF="node28.html">Controlling Single Board Heater</A>
+<B> Up:</B> <A NAME="tex2html578"
+  HREF="node26.html">Frequency Analysis of sine</A>
+<B> Previous:</B> <A NAME="tex2html574"
+  HREF="node26.html">Frequency Analysis of sine</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

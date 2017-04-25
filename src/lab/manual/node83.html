@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Ziegler Nichols Tuning</TITLE>
+<META NAME="description" CONTENT="Ziegler Nichols Tuning">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node84.html">
+<LINK REL="previous" HREF="node79.html">
+<LINK REL="up" HREF="node77.html">
+<LINK REL="next" HREF="node84.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1210"
+  HREF="node84.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1208"
+  HREF="node77.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1202"
+  HREF="node82.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1211"
+  HREF="node84.html">Step Test Experiments and</A>
+<B> Up:</B> <A NAME="tex2html1209"
+  HREF="node77.html">Design and Implementation of</A>
+<B> Previous:</B> <A NAME="tex2html1203"
+  HREF="node82.html">Direct synthesis</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00930000000000000000">
+Ziegler Nichols Tuning</A>
+</H1>
+For Ziegler Nichols Tuning, we use the step response of the open loop experiment.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="ziegler"></A><A NAME="3705"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.2:</STRONG>
+Tangent approach to Ziegler Nichols Tuning</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="224" HEIGHT="131" ALIGN="BOTTOM" BORDER="0"
+ SRC="./ziegler.jpg"
+ ALT="Image ziegler"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="3712"></A>
+<TABLE>
+<CAPTION><STRONG>Table 9.1:</STRONG>
+Ziegler Nichols PID Settings</CAPTION>
+<TR><TD>
+	<DIV ALIGN="CENTER">
+
+</DIV>
+	<TABLE CELLPADDING=3 BORDER="1">
+<TR><TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="25" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img395.png"
+ ALT="$ K_c$"></SPAN></TD>
+<TD ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="18" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img112.png"
+ ALT="$ \tau _i$"></SPAN></TD>
+<TD ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="21" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img118.png"
+ ALT="$ \tau _d$"></SPAN></TD>
+</TR>
+<TR><TD ALIGN="LEFT">P</TD>
+<TD ALIGN="CENTER">1/RL</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">PI</TD>
+<TD ALIGN="CENTER">0.9/RL</TD>
+<TD ALIGN="CENTER">3L</TD>
+<TD ALIGN="CENTER">&nbsp;</TD>
+</TR>
+<TR><TD ALIGN="LEFT">PID</TD>
+<TD ALIGN="CENTER">1.2/RL</TD>
+<TD ALIGN="CENTER">2L</TD>
+<TD ALIGN="CENTER">.5L</TD>
+</TR>
+</TABLE>
+	
+	<A NAME="ziegler"></A>
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+Table <A HREF="#ziegler">9.1</A> gives the PID settings. In this approach too, for every open step test, K and <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$ \tau$"></SPAN> are found and 
+correlated as function of average temperature and PID settings are then found as functions of temperature.
+
+<BR>
+Note: For a first order transfer function we assume
+
+<UL>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="26" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$ K_p$"></SPAN> <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img408.png"
+ ALT="$ \approx$"></SPAN> K 
+</LI>
+<LI><SPAN CLASS="MATH"><IMG
+ WIDTH="22" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ \tau _p$"></SPAN> <SPAN CLASS="MATH"><IMG
+ WIDTH="17" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img408.png"
+ ALT="$ \approx$"></SPAN> <SPAN CLASS="MATH"><IMG
+ WIDTH="14" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$ \tau$"></SPAN>
+</LI>
+</UL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

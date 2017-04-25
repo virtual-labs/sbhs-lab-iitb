@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>MPC theory</TITLE>
+<META NAME="description" CONTENT="MPC theory">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node110.html">
+<LINK REL="previous" HREF="node108.html">
+<LINK REL="up" HREF="node108.html">
+<LINK REL="next" HREF="node110.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1508"
+  HREF="node110.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1506"
+  HREF="node108.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1500"
+  HREF="node108.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1509"
+  HREF="node110.html">Implementing MPC</A>
+<B> Up:</B> <A NAME="tex2html1507"
+  HREF="node108.html">Model Predictive Control in</A>
+<B> Previous:</B> <A NAME="tex2html1501"
+  HREF="node108.html">Model Predictive Control in</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001010000000000000000">
+MPC theory</A>
+</H1>
+An equivalent quadratic programming (QP) formulation for constrained DMC (as given in LQG_MPC_notes by Prof Sachin Patwardhan) is given as follows
+
+<BR>
+<BR>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR>
+<TD COLSPAN=2 ALIGN="LEFT">
+<BR>
+Subject to<P>
+<BR></TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="398" HEIGHT="59" ALIGN="MIDDLE" BORDER="0"
+ SRC="img425.png"
+ ALT="$\displaystyle min_{U_{f}}\frac{1}{2}U_{f}(k)^{T}HU_{f}(k)+F^{T}U_{f}(k)AU_{f}(k) \leq b \intertext{where}$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+<A NAME="eqn1">(<SPAN CLASS="arabic">10</SPAN>.<SPAN CLASS="arabic">1</SPAN>)</A></TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+<P><!-- MATH
+ \begin{displaymath}
+A =
+\left[ {\begin{array}{cc}
+ I_{qm}  \\
+ -I_{qm}  \\
+ \end{array} } \right]
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="105" HEIGHT="87" ALIGN="MIDDLE" BORDER="0"
+ SRC="img426.png"
+ ALT="$\displaystyle A =
+\left[ {\begin{array}{cc}
+I_{qm} \\
+-I_{qm} \\
+\end{array} } \right]
+$">
+</DIV><P></P>
+
+<BR>
+<P><!-- MATH
+ \begin{displaymath}
+b =
+\left[ {\begin{array}{cc}
+ U^{H}  \\
+ -U_{L}  \\
+ \end{array} } \right]
+\end{displaymath}
+ -->
+</P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay">
+<IMG
+ WIDTH="102" HEIGHT="87" ALIGN="MIDDLE" BORDER="0"
+ SRC="img427.png"
+ ALT="$\displaystyle b =
+\left[ {\begin{array}{cc}
+U^{H} \\
+-U_{L} \\
+\end{array} } \right]
+$">
+</DIV><P></P> 
+<BR>
+<P></P>
+<DIV ALIGN="CENTER" CLASS="mathdisplay"><TABLE CELLPADDING="0" WIDTH="100%" ALIGN="CENTER">
+<TR>
+<TD COLSPAN=2 ALIGN="LEFT">
+<BR>
+Also, we have outputs and manipulated variables related to state variables by<P>
+<BR></TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="241" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img428.png"
+ ALT="$\displaystyle x(k+1)=\Phi x(k) + \Gamma(k) + w(k)$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">10</SPAN>.<SPAN CLASS="arabic">2</SPAN>)</TD></TR>
+<TR VALIGN="MIDDLE">
+<TD NOWRAP ALIGN="CENTER"><SPAN CLASS="MATH"><IMG
+ WIDTH="152" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img429.png"
+ ALT="$\displaystyle y(k)= Cx(k) + v(k)$"></SPAN></TD>
+<TD NOWRAP CLASS="eqno" WIDTH="10" ALIGN="RIGHT">
+(<SPAN CLASS="arabic">10</SPAN>.<SPAN CLASS="arabic">3</SPAN>)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+<SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img430.png"
+ ALT="$ \phi$"></SPAN> is represented by matrix A in the code, <SPAN CLASS="MATH"><IMG
+ WIDTH="15" HEIGHT="16" ALIGN="BOTTOM" BORDER="0"
+ SRC="img431.png"
+ ALT="$ \Gamma$"></SPAN> is represented as matrix B and C is represented as C matrix in the code.
+
+<P>
+<BR><HR>
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

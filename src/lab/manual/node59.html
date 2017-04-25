@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Implementing 2DOF controller locally</TITLE>
+<META NAME="description" CONTENT="Implementing 2DOF controller locally">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node60.html">
+<LINK REL="previous" HREF="node55.html">
+<LINK REL="up" HREF="node54.html">
+<LINK REL="next" HREF="node60.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html933"
+  HREF="node60.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html931"
+  HREF="node54.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html925"
+  HREF="node58.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html934"
+  HREF="node60.html">Implementing 2-DOF Controller on</A>
+<B> Up:</B> <A NAME="tex2html932"
+  HREF="node54.html">Two Degrees of Freedom</A>
+<B> Previous:</B> <A NAME="tex2html926"
+  HREF="node58.html">Procedure to calculate 2DOF</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00620000000000000000">
+Implementing 2DOF controller locally</A>
+</H1>
+
+<P>
+The detailed procedure to perform a local experiment is explained in Chapter<A HREF="#sercomm"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/local/share/lib/latex2html/icons/crossref.png"></A>. A summary of the same is provided in section <A HREF="#local-summary"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/local/share/lib/latex2html/icons/crossref.png"></A> It is same for this section with following changes.
+
+<P>
+
+<OL>
+<LI>Step1: The working directory is <TT>2dof_controller</TT>
+</LI>
+<LI>Step2: Same
+</LI>
+<LI>Step3: Same
+</LI>
+<LI>Step4: Same
+</LI>
+<LI>Step5: Load 2DOF controller function by executing command
+<BR><TT>exec&lt;space&gt;twodof.sci</TT>. Make sure the correct order of control law is choosen in this file as explained in section <A HREF="node58.html#sec-steps">6.1.2</A>
+</LI>
+<LI>Step6: Load Xcos code for 2DOF controller using the command
+<BR><TT>exec&lt;space&gt;twodof.xcos</TT>. In the <TT>twodof.xcos</TT> Xcos file, change the setpoint to the desired value. Make sure the period of the clock block is the same as the sampling time used for discretisation.  The Xcos diagram is shown in figure <A HREF="node61.html#2dof-xcos">6.7</A>. 
+</LI>
+<LI>Step7: Same
+</LI>
+</OL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

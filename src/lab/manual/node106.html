@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Conducting experiments locally</TITLE>
+<META NAME="description" CONTENT="Conducting experiments locally">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node107.html">
+<LINK REL="previous" HREF="node101.html">
+<LINK REL="up" HREF="node77.html">
+<LINK REL="next" HREF="node107.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1452"
+  HREF="node107.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1450"
+  HREF="node77.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1444"
+  HREF="node105.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1453"
+  HREF="node107.html">Conducting experiments virtually</A>
+<B> Up:</B> <A NAME="tex2html1451"
+  HREF="node77.html">Design and Implementation of</A>
+<B> Previous:</B> <A NAME="tex2html1445"
+  HREF="node105.html">Conclusion</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00980000000000000000">
+Conducting experiments locally</A>
+</H1>
+Under the <TT>local</TT> folder locate <TT>Self_tuning_controller</TT> folder. You will see two folders <TT>ConventionalTuning_Vikas</TT> and <TT>SelfTuning_Vikas</TT>. These two directories will contain four more folders, two for PI and two for PID.
+
+<P>
+The detailed procedure to perform a local experiment is explained in Chapter<A HREF="#sercomm"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/local/share/lib/latex2html/icons/crossref.png"></A>. A summary of the same is provided in section <A HREF="#local-summary"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/local/share/lib/latex2html/icons/crossref.png"></A> It is same for this section with following changes.
+
+<P>
+
+<OL>
+<LI>Step1: The working directory is one of the four experiments you want to do. For example <B>virtual/Self_tuning_controller/SelfTuning_Vikas
+<BR>/PIControllerFandisturbance</B>
+</LI>
+<LI>Step2:  Load the functions available in common files directory by executing the command <TT>getd&lt;space&gt;..&#92;..&#92;..&#92;common_files </TT>
+</LI>
+<LI>Step3: Same
+</LI>
+<LI>Step4: Same
+</LI>
+<LI>Step5: Load required function by using exec command.
+<BR>
+For example, <TT>exec&lt;space&gt;pi_bda_tuned_dist.sce</TT> if you want to run the <TT>PI Controller Fan disturbance</TT> experiment.  
+</LI>
+<LI>Step6: Load Xcos code for corresponding experiment using xcos command.
+<BR>
+For example  <TT>exec&lt;space&gt;pi_tuned_dist.xcos</TT>
+</LI>
+<LI>Step7: Same
+</LI>
+</OL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

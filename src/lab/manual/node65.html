@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Conducting PRBS Test on SBHS locally</TITLE>
+<META NAME="description" CONTENT="Conducting PRBS Test on SBHS locally">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node66.html">
+<LINK REL="previous" HREF="node63.html">
+<LINK REL="up" HREF="node62.html">
+<LINK REL="next" HREF="node66.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html999"
+  HREF="node66.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html997"
+  HREF="node62.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html991"
+  HREF="node64.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1000"
+  HREF="node66.html">Conducting PRBS Test on</A>
+<B> Up:</B> <A NAME="tex2html998"
+  HREF="node62.html">PRBS Modeling and Implementation</A>
+<B> Previous:</B> <A NAME="tex2html992"
+  HREF="node64.html">Issues with Step Test</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00720000000000000000">
+Conducting PRBS Test on SBHS locally</A>
+</H1>
+The detailed procedure to perform a local experiment is explained in Chapter<A HREF="#sercomm"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/local/share/lib/latex2html/icons/crossref.png"></A>. A summary of the same is provided in section <A HREF="#local-summary"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/local/share/lib/latex2html/icons/crossref.png"></A> It is same for this section with following changes.
+
+<P>
+
+<OL>
+<LI>Step1: The working directory is <TT>prbs/identification</TT>
+</LI>
+<LI>Step2:  Load the functions available in common files directory by executing the command <TT>getd&lt;space&gt;..&#92;..&#92;common_files </TT>
+</LI>
+<LI>Step3: Same
+</LI>
+<LI>Step4: Same
+</LI>
+<LI>Step5: Load prbstest function by executing command
+<BR><TT>exec&lt;space&gt;prbstest.sci</TT>. Load prbs signal generation function by executing command <TT>exec&lt;space&gt;prbs.sci</TT>
+</LI>
+<LI>Step6: Load Xcos code for prbs test using the command
+<BR><TT>exec&lt;space&gt;prbstest.xcos</TT>
+</LI>
+<LI>Step7: Same
+</LI>
+</OL>
+
+<P>
+The response is as shown in figure <A HREF="#prbs-test-local">7.3</A>. The data file thus obtained is as shown in the Table <A HREF="#prbs-local-data">7.1</A>. This data file is available for reference in the directory <TT>prbs/identification</TT> with name <TT>prbs-data-local.txt</TT>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="prbs-test-local"></A><A NAME="2958"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7.3:</STRONG>
+PRBS Local response</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="610" HEIGHT="460" ALIGN="BOTTOM" BORDER="0"
+ SRC="./prbs-local.png"
+ ALT="Image prbs-local"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+<BR><P></P>
+<DIV ALIGN="CENTER"><A NAME="prbs-local-data"></A><A NAME="2964"></A>
+<TABLE>
+<CAPTION><STRONG>Table 7.1:</STRONG>
+PRBS local experiment data</CAPTION>
+<TR><TD><IMG
+ WIDTH="599" HEIGHT="107" BORDER="0"
+ SRC="img344.png"
+ ALT="\begin{table}
+\begin{verbatim}
+1.0 50.0 50.0 36.4 1417298828422.0
+2.0 50.0 5...
+...8933585.0
+1000.0 40.0 50.0 42.9 1417298933694.0\end{verbatim}
+\end{table}"></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR>
+
+<P>
+<BR><HR>
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

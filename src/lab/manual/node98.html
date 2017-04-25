@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>PI Controller using Ziegler Nichols Tuning</TITLE>
+<META NAME="description" CONTENT="PI Controller using Ziegler Nichols Tuning">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node99.html">
+<LINK REL="previous" HREF="node97.html">
+<LINK REL="up" HREF="node96.html">
+<LINK REL="next" HREF="node99.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1372"
+  HREF="node99.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1370"
+  HREF="node96.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1364"
+  HREF="node97.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1373"
+  HREF="node99.html">PID Controller using Ziegler</A>
+<B> Up:</B> <A NAME="tex2html1371"
+  HREF="node96.html">Set Point Tracking</A>
+<B> Previous:</B> <A NAME="tex2html1365"
+  HREF="node97.html">PI Controller Designed by</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00962000000000000000">
+PI Controller using Ziegler Nichols Tuning</A>
+</H2>
+The results of the of the experiments carried out for the self tuning PI controller using Ziegler Nichols tuning method are 
+shown. The upper plot shows the variations of the set point temperature (the black line) and the actual temperature 
+(the green line) in the SBHS. The lower plot shows the control effort.
+
+<DIV ALIGN="CENTER"><A NAME="3911"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.18:</STRONG>
+Result for self tuning controller designed using Ziegler Nichols Tuning for set point going from 32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 37<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</CAPTION>
+<TR><TD><P>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="794" HEIGHT="329" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step32to37.jpg"
+ ALT="Image step32to37"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Although there are oscillations, the temperature remains near the set point. The result for a higher value of set point 
+change is also shown.
+
+<DIV ALIGN="CENTER"><A NAME="3915"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.19:</STRONG>
+Result for self tuning controller designed using Ziegler Nichols Tuning for set point going from 35<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="787" HEIGHT="329" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step35to45.jpg"
+ ALT="Image step35to45">
+
+<P></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+For this experiment, the controller is able to make the temperature follow the set point closely. The fluctuations 
+may be due to noises and the surrounding conditions.The plot for result of an experiment with another value of set
+point change is also shown.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="3919"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.20:</STRONG>
+Result for self tuning controller designed using Ziegler Nichols Tuning for set point going from 40<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C</CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+	<IMG
+  WIDTH="781" HEIGHT="329" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step40to45.jpg"
+ ALT="Image step40to45"></TD></TR>
+</TABLE>
+</DIV>
+In this experiment too, the controller is able to keep the temperature close to the set point and it stabilises fast.
+<BR>
+For comparison, results of experiments done with conventional PI controller designed using the Ziegler Nichols method are also 
+shown.
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="3923"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.21:</STRONG>
+Result for conventional controller designed using Ziegler Nichols Tuning for set point going from 32<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 37<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="793" HEIGHT="329" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step32to37.jpg"
+ ALT="Image step32to37"></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="3927"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.22:</STRONG>
+Result for conventional controller designed using Ziegler Nichols Tuning for set point going from 35<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV><IMG
+  WIDTH="944" HEIGHT="331" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step35to45.jpg"
+ ALT="Image step35to45"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="3931"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9.23:</STRONG>
+Result for conventional controller designed using Ziegler Nichols Tuning for set point going from 40<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C </CAPTION>
+<TR><TD>
+<DIV ALIGN="CENTER">
+
+</DIV>
+<IMG
+  WIDTH="944" HEIGHT="321" ALIGN="BOTTOM" BORDER="0"
+ SRC="./step40to45.jpg"
+ ALT="Image step40to45"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+For set point change from 40<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C to 45<SPAN CLASS="MATH"><IMG
+ WIDTH="12" HEIGHT="20" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$ ^0$"></SPAN>C, the self tuning controller showed small oscillations, but the conventional 
+controller shows bigger oscillations.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html1372"
+  HREF="node99.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1370"
+  HREF="node96.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1364"
+  HREF="node97.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1373"
+  HREF="node99.html">PID Controller using Ziegler</A>
+<B> Up:</B> <A NAME="tex2html1371"
+  HREF="node96.html">Set Point Tracking</A>
+<B> Previous:</B> <A NAME="tex2html1365"
+  HREF="node97.html">PI Controller Designed by</A></DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>

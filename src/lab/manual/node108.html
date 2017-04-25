@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2016 (1.71) -->
+<HTML>
+<HEAD>
+<TITLE>Model Predictive Control in Single Board Heater System using
+SCILAB</TITLE>
+<META NAME="description" CONTENT="Model Predictive Control in Single Board Heater System using
+SCILAB">
+<META NAME="keywords" CONTENT="sbhs-new-manual">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2016">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="sbhs-new-manual.css">
+
+<LINK REL="next" HREF="node137.html">
+<LINK REL="previous" HREF="node77.html">
+<LINK REL="up" HREF="sbhs-new-manual.html">
+<LINK REL="next" HREF="node109.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html1470"
+  HREF="node109.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/local/share/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html1468"
+  HREF="sbhs-new-manual.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/local/share/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html1462"
+  HREF="node107.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/local/share/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html1471"
+  HREF="node109.html">MPC theory</A>
+<B> Up:</B> <A NAME="tex2html1469"
+  HREF="sbhs-new-manual.html">sbhs-new-manual</A>
+<B> Previous:</B> <A NAME="tex2html1463"
+  HREF="node107.html">Conducting experiments virtually</A>
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION001000000000000000000">
+Model Predictive Control in Single Board Heater System using
+<BR>
+SCILAB</A>
+</H1>
+This chapter presents Model Predictive Control in Single Board Heater System done by Mr. Pratik Behera.<A NAME="tex2html117"
+  HREF="footnode.html#foot4712"><SUP><SPAN CLASS="arabic">10</SPAN>.<SPAN CLASS="arabic">1</SPAN></SUP></A>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A NAME="tex2html1472"
+  HREF="node109.html">MPC theory</A>
+<LI><A NAME="tex2html1473"
+  HREF="node110.html">Implementing MPC</A>
+<LI><A NAME="tex2html1474"
+  HREF="node111.html">Experiments conducted to implement MPC</A>
+<LI><A NAME="tex2html1475"
+  HREF="node112.html">Sample run to implement MPC</A>
+<UL>
+<LI><A NAME="tex2html1476"
+  HREF="node113.html">Positive Step Change to Set Point and Fan</A>
+<LI><A NAME="tex2html1477"
+  HREF="node114.html">Negative Step Change to Set Point and Fan</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1478"
+  HREF="node115.html">Effect of Tuning parameters: Weighting factors, We and Wu</A>
+<UL>
+<LI><A NAME="tex2html1479"
+  HREF="node116.html">Positive Step Change and (We, Wu)=(1,1)</A>
+<LI><A NAME="tex2html1480"
+  HREF="node117.html">Positive Step Change and (We, Wu)=(10,10)</A>
+<LI><A NAME="tex2html1481"
+  HREF="node118.html">Positive Step Change and (We, Wu)=(40,40)</A>
+<LI><A NAME="tex2html1482"
+  HREF="node119.html">Negative Step Change and (We,Wu)=(1,1)</A>
+<LI><A NAME="tex2html1483"
+  HREF="node120.html">Negative Step Change and (We, Wu)=(10,10)</A>
+<LI><A NAME="tex2html1484"
+  HREF="node121.html">Negative Step Change and (We, Wu)=(40,40)</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1485"
+  HREF="node122.html">For different We and Wu factors</A>
+<UL>
+<LI><A NAME="tex2html1486"
+  HREF="node123.html">We =100 and Wu = 2</A>
+<LI><A NAME="tex2html1487"
+  HREF="node124.html">We = 2 and Wu = 100</A>
+<LI><A NAME="tex2html1488"
+  HREF="node125.html">We =10 and Wu = 100</A>
+<LI><A NAME="tex2html1489"
+  HREF="node126.html">We =100 and Wu = 10</A>
+<LI><A NAME="tex2html1490"
+  HREF="node127.html">Conclusion on Weighting factor experiments</A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1491"
+  HREF="node128.html">Effect of Control Horizon Paramter, q</A>
+<UL>
+<LI><A NAME="tex2html1492"
+  HREF="node129.html">For positive step change in Set point and Fan speed </A>
+<LI><A NAME="tex2html1493"
+  HREF="node130.html">For negative step change in Set point and Fan speed</A>
+<LI><A NAME="tex2html1494"
+  HREF="node131.html">Conclusion on the effect of Control Horizon parameter </A>
+</UL>
+<BR>
+<LI><A NAME="tex2html1495"
+  HREF="node132.html">Implementing MPC locally</A>
+<LI><A NAME="tex2html1496"
+  HREF="node133.html">Implementing MPC virtually</A>
+<LI><A NAME="tex2html1497"
+  HREF="node134.html">Conclusion for MPC project</A>
+<LI><A NAME="tex2html1498"
+  HREF="node135.html">Acknowledgement </A>
+<LI><A NAME="tex2html1499"
+  HREF="node136.html">General Information on Experiments for this Project</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+rokade
+2017-04-23
+</ADDRESS>
+</BODY>
+</HTML>
